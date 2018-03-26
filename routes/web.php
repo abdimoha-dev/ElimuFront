@@ -24,4 +24,4 @@ Auth::routes();
 ################################################
 ################## DASHBOARD ###################
 ################################################
-Route::get('/home', 'HomeController@showUserDashboard')->name('home');
+Route::get('/home', 'HomeController@showUserDashboard')->name('home')->middleware('auth');

@@ -36,6 +36,25 @@ mix.copy('resources/assets/site/img', 'public/site/img');
 
 // AUTH
 
+mix.styles([
+    'node_modules/bootstrap/dist/css/bootstrap.min.css',
+    'node_modules/flexslider/demo/css/flexslider.css',
+    'resources/assets/site/css/style.css'
+], 'public/css/site.css');
+
+mix.scripts([
+    // 'resources/assets/site/js/jquery-1.10.2.js',
+    'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/bootstrap/dist/js/bootstrap.min.js',
+    'node_modules/flexslider/demo/js/jquery.flexslider.js',
+    // 'node_modules/scrollreveal/dist/scrollreveal.min.js',
+    'node_modules/jquery.easing/jquery.easing.min.js',
+    'resources/assets/site/js/custom.js'
+], 'public/js/site.js');
+
+mix.copy('node_modules/scrollreveal/dist/scrollreveal.min.js', 'public/js/scrollreveal.min.js');
+mix.copy('resources/assets/site/img', 'public/site/img');
+
 // DASHBOARD
 mix.styles([
     'node_modules/bootstrap/dist/css/bootstrap.min.css',
