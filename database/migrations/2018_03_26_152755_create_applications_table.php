@@ -15,8 +15,8 @@ class CreateApplicationsTable extends Migration
     {
         Schema::create('applications', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('user_id');
             $table->string('id_number')->unique();
-            $table->string('user_id');
             $table->string('place_of_birth');
             $table->string('place_of_residence');
             $table->string('year_of_birth');

@@ -25,3 +25,7 @@ Auth::routes();
 ################## DASHBOARD ###################
 ################################################
 Route::get('/home', 'HomeController@showUserDashboard')->name('home')->middleware('auth');
+
+
+Route::get('apply', 'ApplicationController@insertform')->middleware(['auth', 'web']);
+Route::post('apply', 'ApplicationController@saveApplication')->middleware(['auth', 'web']);

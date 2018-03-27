@@ -27,21 +27,6 @@ class LoginController extends Controller
      */
     protected $redirectTo = '/home';
 
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-
-    /** public function showLoginForm()
-    {
-        return view('log');
-    }*/
-
-    public function showHeader()
-    {
-        return view('header');
-    }
 
     public function __construct()
     {
