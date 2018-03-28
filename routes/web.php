@@ -26,6 +26,26 @@ Auth::routes();
 ################################################
 Route::get('/home', 'HomeController@showUserDashboard')->name('home')->middleware('auth');
 
+#################### USER ######################
+Route::prefix('user')->middleware('auth')->group(function () {
+    # Application group
+    Route::prefix('application')->group(function () {
+        # Application Details
+        Route::get('details', 'User\ApplicationController@showApplicationDetails');
 
-Route::get('apply', 'ApplicationController@insertform')->middleware(['auth', 'web']);
-Route::post('apply', 'ApplicationController@saveApplication')->middleware(['auth', 'web']);
+        # Complete application
+        Route::get('complete', 'User\ApplicationController@showCompleteApplicationForm');
+        Route::post('complete', 'User\ApplicationController@saveAdditinalApplicationDetails');
+
+        # Edit Application
+        Route::get('edit', 'User\ApplicationController@editApplicationDetails');
+        Route::post('edit', 'User\ApplicationController@saveEditedApplicationDetails');
+    });
+});
+
+#################### ADMIN #####################
+Route::prefix('admin')->group(function () {
+    //
+});
+#################### ROOT ######################
+

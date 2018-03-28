@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\User;
-use App\Application;
+use App\Models\User;
+use App\Models\Application;
 
 class ApplicationTableSeeder extends Seeder
 {
@@ -14,9 +14,11 @@ class ApplicationTableSeeder extends Seeder
     public function run()
     {
         User::all()->each(function ($user) {
-            factory(Application::class, 1)->create([
-                'user_id' => $user->id,
-            ]);
+            if (($user->id != 1 && $user->id != 2)) {
+                factory(Application::class, 1)->create([
+                    'user_id' => $user->id,
+                ]);
+            }
         });
     }
 }

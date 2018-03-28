@@ -1,9 +1,10 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Hash;
 
 class User extends Authenticatable
 {
@@ -15,7 +16,12 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'first_name','second_name', 'email', 'phone', 'password',
+        'first_name',
+        'second_name',
+        'email',
+        'phone',
+        'password',
+        'role',
     ];
 
     /**
@@ -24,6 +30,13 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password',
+        'remember_token',
     ];
+
+
+    public function setPasswordAttribute($value)
+    {
+        $this->attributes['password'] = Hash::make($value);
+    }
 }

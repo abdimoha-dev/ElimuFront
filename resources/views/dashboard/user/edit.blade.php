@@ -1,4 +1,4 @@
-@extends('layouts.site')
+@extends('layouts.dash')
 
 @section('content')
     <div class="container">
@@ -64,7 +64,7 @@
                         {{ Form::email('next_of_kin_email',old('next_of_kin_email'), ['class'=>'form-control','id'=>'next_of_kin_email']) }}
 
                         <button type="submit" class="btn btn-primary">
-                           Register
+                            Register
                         </button>
 
                         {{ Form::close() }}

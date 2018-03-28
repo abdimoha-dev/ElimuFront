@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Requests\Auth\RegisterRequest;
-use App\User;
+use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -49,15 +49,15 @@ class RegisterController extends Controller
     public function register(RegisterRequest $registerRequest)
     {
         User::create([
-            'first_name' => $registerRequest->first_name,
-            'second_name'=> $registerRequest->second_name,
-            'email'=>$registerRequest->email,
-            'phone'=>$registerRequest->phone,
-           // 'password'=>$registerRequest->password,
-            'password' => Hash::make($registerRequest->password),
+            'first_name'  => $registerRequest->first_name,
+            'second_name' => $registerRequest->second_name,
+            'email'       => $registerRequest->email,
+            'phone'       => $registerRequest->phone,
+            'password'    => $registerRequest->password,
+            'role'        => 'USER',
         ]);
 
-       // return Redirect::route('home');
-       return redirect('login');
+        // return Redirect::route('home');
+        return redirect('login');
     }
 }
