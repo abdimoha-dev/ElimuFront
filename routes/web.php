@@ -49,3 +49,6 @@ Route::prefix('admin')->group(function () {
 });
 #################### ROOT ######################
 
+#################### TESTS ######################
+//Route::view('auth', 'layouts.auth');
+
