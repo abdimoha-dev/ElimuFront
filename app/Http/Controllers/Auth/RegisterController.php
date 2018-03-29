@@ -48,6 +48,7 @@ class RegisterController extends Controller
      */
     public function register(RegisterRequest $registerRequest)
     {
+
         User::create([
             'first_name'  => $registerRequest->first_name,
             'second_name' => $registerRequest->second_name,
