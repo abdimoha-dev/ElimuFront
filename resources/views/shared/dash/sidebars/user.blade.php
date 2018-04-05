@@ -14,7 +14,7 @@
     </a>
     <ul class="treeview-menu">
         <li class="{{ (request()->is('')) ? 'active': '' }}">
-            <a href="#!">
+            <a href="{{ url('user/application/details') }}">
                 <i class="fa fa-circle-o"></i> Application Details
             </a>
         </li>

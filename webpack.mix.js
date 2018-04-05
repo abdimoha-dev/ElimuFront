@@ -38,7 +38,7 @@ mix.copy('resources/assets/site/img', 'public/site/img');
 mix.styles([
     'node_modules/bootstrap/dist/css/bootstrap.min.css',
     'resources/assets/dash/css/AdminLTE.min.css',
-    'node_modules/icheck/skins/square/blue.css'
+    'node_modules/icheck/skins/all.css'
 ], 'public/css/auth.css');
 
 mix.scripts([

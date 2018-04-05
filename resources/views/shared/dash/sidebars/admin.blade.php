@@ -1,45 +1,27 @@
 <li class="treeview">
     <a href="#">
         <i class="fa fa-laptop"></i>
-        <span>UI Elements</span>
+        <span>More Details</span>
         <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
     </a>
     <ul class="treeview-menu">
-        <li><a href="../UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>
-        <li><a href="../UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
-        <li><a href="../UI/buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>
-        <li><a href="../UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>
-        <li><a href="../UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>
-        <li><a href="../UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
+        <li><a href="../UI/general.html"><i class="fa fa-circle-o"></i> My application</a></li>
+        <li><a href="../UI/icons.html"><i class="fa fa-circle-o"></i> pending job Applications</a></li>
+        <li><a href="../UI/buttons.html"><i class="fa fa-circle-o"></i> interviews</a></li>
+
+        <li class="{{ (request()->is('')) ? 'active': '' }}">
+            <a href="{{ url('admin/details/complete') }}">
+                <i class="fa fa-circle-o"></i> Complete Application
+            </a>
+        </li>
+        <li class="{{ (request()->is('')) ? 'active': '' }}">
+            <a href="#!">
+                <i class="fa fa-circle-o"></i> Edit Application
     </ul>
 </li>
-<li class="treeview">
-    <a href="#">
-        <i class="fa fa-edit"></i> <span>Forms</span>
-        <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-    </a>
-    <ul class="treeview-menu">
-        <li><a href="../forms/general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>
-        <li><a href="../forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
-        <li><a href="../forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
-    </ul>
-</li>
-<li class="treeview">
-    <a href="#">
-        <i class="fa fa-table"></i> <span>Tables</span>
-        <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-    </a>
-    <ul class="treeview-menu">
-        <li><a href="../tables/simple.html"><i class="fa fa-circle-o"></i> Simple tables</a></li>
-        <li><a href="../tables/data.html"><i class="fa fa-circle-o"></i> Data tables</a></li>
-    </ul>
-</li>
+
 <li>
     <a href="../calendar.html">
         <i class="fa fa-calendar"></i> <span>Calendar</span>

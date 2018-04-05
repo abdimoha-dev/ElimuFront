@@ -9,4 +9,9 @@ class Application extends Model
     protected $table = 'applications';
 
     protected $guarded = [];
+
+    public function users()
+    {
+        return $this->hasOne('App\Models\User','id', 'user_id');
+    }
 }

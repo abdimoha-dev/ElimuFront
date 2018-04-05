@@ -27,6 +27,7 @@
 
 @section('content')
     {{ Form::open(['url'=>'user/application/complete', 'role' =>'form'])  }}
+    @csrf
     <div class="box-body">
         <div class="form-group">
             {{ Form::label('id_number','ID Number')  }}

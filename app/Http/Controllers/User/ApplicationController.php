@@ -6,17 +6,17 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\User\CompleteApplicationRequest;
 use Illuminate\Http\Request;
 use App\Models\Application;
+use Illuminate\Support\Facades\View;
 
 class ApplicationController extends Controller
 {
     public function showCompleteApplicationForm()
-    {
-        return view('dashboard.user.application');
+         {
+        return view('dashboard.user.application.complete');
     }
 
     public function saveAdditinalApplicationDetails(CompleteApplicationRequest $request)
     {
-//        dd($request->toArray());
 
         Application::create([
             'user_id'            => auth()->user()->id,
@@ -33,6 +33,23 @@ class ApplicationController extends Controller
             'next_of_kin_email'  => $request->next_of_kin_email,
         ]);
 
-        return redirect('home');
+
+//        return redirect('home');
+    }
+
+    public function showApplicationDetails()
+    {
+
+//        dump($user->toArray());
+
+//        dump($user->first_name);
+//
+//        dump($user->application->toArray());
+//
+//        dump($user->application->place_of_residence);
+
+        return view('dashboard.user.application.details', [
+            'user' => auth()->user()
+        ]);
     }
 }

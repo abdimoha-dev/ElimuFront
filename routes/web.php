@@ -1,15 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 ################################################
 ##################### SITE #####################
 ################################################
@@ -43,12 +33,25 @@ Route::prefix('user')->middleware('auth')->group(function () {
     });
 });
 
-#################### ADMIN #####################
+Route::get('complete', 'Admin\AdditionalDetailsController@showAdditinalDetailsForm');
+Route::get('complete', 'Admin\AdditionalDetailsController@saveAdditinalDetails');
+##################### ADMIN #####################
 Route::prefix('admin')->group(function () {
-    //
+    Route::prefix('details')->group(function () {
+        Route::get('complete', 'Admin\AdditionalDetailsController@showAdminDetailsForm');
+        Route::post('complete', 'Admin\AdditionalDetailsController@adminAdditinalDetails');
+    });
 });
-#################### ROOT ######################
+#################### ROOT #######################
 
 #################### TESTS ######################
 //Route::view('auth', 'layouts.auth');
+Route::view('applicationform', 'viewdetails.');
+
+
+###################RESETTING#####################
+Route::view('resetemail', 'auth/passwords/email');
+
+Route::view('resetPassword', 'auth/passwords/reset');
+Route::view('details', 'dashboard/user/application/details');
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Auth;
+namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class RegisterRequest extends FormRequest
+class  CompleteAdminRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -14,6 +14,7 @@ class RegisterRequest extends FormRequest
     public function authorize()
     {
         return true;
+
     }
 
     /**
@@ -24,18 +25,19 @@ class RegisterRequest extends FormRequest
     public function rules()
     {
         return [
-            'first_name' => 'required|string|max:255',
-            'second_name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'phone' => 'required|string|max:13|unique:users',
-            'password' => 'required|string|min:6|confirmed',
+            'Tsc_no' => 'required|string|max:255',
+            'id_no' => 'required|string|max:255',
+            'alt_phone' => 'required|string|max:10',
+
         ];
     }
 
     public function messages()
     {
         return [
-            'first_name.required' => 'Please enter your first name'
+            'Tsc_no.required' => 'Please enter your first name',
+            'id_no.required'=>'Please enter your ID Number',
+            'alt_phone.required'=>'Please enter your alternative phone Number',
         ];
     }
 }

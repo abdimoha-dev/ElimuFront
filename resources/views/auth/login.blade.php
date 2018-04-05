@@ -1,5 +1,9 @@
 @extends('layouts.auth')
 
+@section('title-message')
+    <p class="login-box-msg">Sign in to start your session</p>
+@endsection
+
 @section('content')
 
     {!! Form::open(['url'=>'login']) !!}

@@ -39,4 +39,14 @@ class User extends Authenticatable
     {
         $this->attributes['password'] = Hash::make($value);
     }
+
+    /**
+     * Defines the relationship between a user and an application
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function application()
+    {
+        return $this->hasOne('App\Models\Application','user_id', 'id');
+    }
 }
