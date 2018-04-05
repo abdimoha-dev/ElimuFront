@@ -40,6 +40,9 @@ Route::prefix('admin')->group(function () {
     Route::prefix('details')->group(function () {
         Route::get('complete', 'Admin\AdditionalDetailsController@showAdminDetailsForm');
         Route::post('complete', 'Admin\AdditionalDetailsController@adminAdditinalDetails');
+
+        Route::get('getform','Admin\SchoolDetailsController@showSchoolDetails');
+        Route::post('getform','Admin\SchoolDetailsController@addSchoolDetails');
     });
 });
 #################### ROOT #######################
