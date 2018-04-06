@@ -6,20 +6,33 @@
               <i class="fa fa-angle-left pull-right"></i>
             </span>
     </a>
+
     <ul class="treeview-menu">
-        <li><a href="../UI/general.html"><i class="fa fa-circle-o"></i> My application</a></li>
-        <li><a href="../UI/icons.html"><i class="fa fa-circle-o"></i> pending job Applications</a></li>
-        <li><a href="../UI/buttons.html"><i class="fa fa-circle-o"></i> interviews</a></li>
 
         <li class="{{ (request()->is('')) ? 'active': '' }}">
             <a href="{{ url('admin/details/complete') }}">
-                <i class="fa fa-circle-o"></i> Complete Application
+                <i class="fa fa-circle-o"></i> Add My Details
             </a>
         </li>
+
         <li class="{{ (request()->is('')) ? 'active': '' }}">
-            <a href="#!">
-                <i class="fa fa-circle-o"></i> Edit Application
+            <a href="{{url('admin/details/getform')}}">
+                <i class="fa fa-circle-o"></i> Add School Details
+            </a>
+        </li>
+
+
+        <li class="{{ (request()->is('')) ? 'active': '' }}">
+            <a href="{{ url('admin/details/vacancy') }}">
+                <i class="fa fa-circle-o"></i> Add Vacancy Details
+            </a>
+        </li>
+
+
     </ul>
+
+
+
 </li>
 
 <li>

@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Models\Headteacher;
+use App\Models\User;
 
 class HeadTeacherTableSeeder extends Seeder
 {
@@ -11,11 +13,17 @@ class HeadTeacherTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('headteachers')->insert([
-            'Tsc_no' => str_random(10),
-            'id_no' =>str_random(10),
-            'alt_phone'=>str_random(10)
+        User::all()->each(function ($user) {
 
-        ]);
+
+            if ($user->role=='ADMIN') {
+                factory(Headteacher::class, 1)->create([
+                    'user_id' => $user->id,
+                ]);
+            }
+
+        });
+
+
     }
 }

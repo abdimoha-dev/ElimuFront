@@ -40,7 +40,7 @@
         </div>
 
         <div class="form-group">
-            {{ Form::label('location','Location')  }}
+            {{ Form::label('location','County Location')  }}
             {{ Form::number('location',old('location'), ['class'=>'form-control']) }}
             @if($errors->has('location'))
                 <p class="help-block text-danger">
@@ -91,7 +91,7 @@
 
         <div class="box-footer">
             <button type="submit" class="btn btn-primary">
-                Complete Application
+                SUBMIT
             </button>
         </div>
     </div>

@@ -12,6 +12,6 @@ class Application extends Model
 
     public function users()
     {
-        return $this->hasOne('App\Models\User','id', 'user_id');
+        return $this->belongsTo('App\Models\User','user_id', 'id');
     }
 }

@@ -43,6 +43,9 @@ Route::prefix('admin')->group(function () {
 
         Route::get('getform','Admin\SchoolDetailsController@showSchoolDetails');
         Route::post('getform','Admin\SchoolDetailsController@addSchoolDetails');
+
+        Route::get('vacancy','Admin\VacancyController@showVacancyDetails');
+        Route::post('vacancy','Admin\VacancyController@AddVacancyDetails');
     });
 });
 #################### ROOT #######################

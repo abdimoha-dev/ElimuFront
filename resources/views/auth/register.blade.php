@@ -47,7 +47,7 @@
             </span>
         @endif
     </div>
-
+    
         {!!  Form::select('user', config('sys.settings.users'));  !!}
 
         <div class="form-group has-feedback">

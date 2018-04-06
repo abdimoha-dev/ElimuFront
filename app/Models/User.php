@@ -47,6 +47,7 @@ class User extends Authenticatable
      */
     public function application()
     {
-        return $this->hasOne('App\Models\Application','user_id', 'id');
+        return $this->hasOne('App\Models\Application', 'user_id', 'id');
     }
+
 }

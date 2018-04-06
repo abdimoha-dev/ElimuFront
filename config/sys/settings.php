@@ -1,8 +1,8 @@
 <?php
 
 return [
-  'users' => [
-    'USER' => 'Teacher',
-    'ADMIN' => 'Headteacher',
-  ],
+    'users' => [
+        'USER'  => 'Teacher',
+        'ADMIN' => 'Headteacher',
+    ],
 ];
