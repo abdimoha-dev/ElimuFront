@@ -45,6 +45,10 @@ class User extends Authenticatable
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
+
+    public function school(){
+        return $this->hasOne('App\Models\School', 'user_id','id');
+    }
     public function application()
     {
         return $this->hasOne('App\Models\Application', 'user_id', 'id');

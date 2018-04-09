@@ -16,8 +16,7 @@ class CreateHeadteacherTable extends Migration
         Schema::create('headteacher', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('user_id');
-            $table->string('Tsc_no');
-            $table->string('ht_id');
+            $table->string('tsc_no');
             $table->string('id_no');
             $table->string('alt_phone');
             $table->timestamps();

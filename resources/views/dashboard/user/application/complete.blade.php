@@ -110,11 +110,43 @@
         </div>
 
         <div class="form-group">
+            {{ Form::label('higher_inst','Higher Institution Attended')}}
+            {{ Form::text('higher_inst',old('higher_inst'), ['class'=>'form-control'])}}
+            @if($errors->has('higher_inst'))
+                <p class="help-block text-danger">
+                    <i class="fa fa-exclamation-triangle fa-fw"></i> {{ $errors->first('higher_inst') }}
+                </p>
+            @endif
+        </div>
+
+        <div class="form-group">
             {{ Form::label('course','Course')}}
-            {{ Form::number('course',old('course'), ['class'=>'form-control']) }}
+            {{ Form::text('course',old('course'), ['class'=>'form-control']) }}
             @if($errors->has('course'))
                 <p class="help-block text-danger">
                     <i class="fa fa-exclamation-triangle fa-fw"></i> {{ $errors->first('course') }}
+                </p>
+            @endif
+        </div>
+
+        <div class="form-group">
+            {{ Form::label('subject_taught','Subjects You Can Teach}}
+            {{ Form::text('subject_taught',old('subject_taught'), ['class'=>'form-control']) }}
+            @if($errors->has('subject_taught'))
+                <p class="help-block text-danger">
+                    <i class="fa fa-exclamation-triangle fa-fw"></i> {{ $errors->first('subject_taught') }}
+                </p>
+            @endif
+        </div>
+
+
+
+        <div class="form-group">
+            {{ Form::label('next_of_kin_name','Next Of Kin Name')}}
+            {{ Form::text('next_of_kin_name',old('next_of_kin_phone'), ['class'=>'form-control']) }}
+            @if($errors->has('next_of_kin_name'))
+                <p class="help-block text-danger">
+                    <i class="fa fa-exclamation-triangle fa-fw"></i> {{ $errors->first('next_of_kin_name') }}
                 </p>
             @endif
         </div>

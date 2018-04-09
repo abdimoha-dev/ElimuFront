@@ -22,11 +22,11 @@
     @csrf
     <div class="box-body">
         <div class="form-group">
-            {{ Form::label('Tsc_no','TSC Number')  }}
-            {{ Form::number('Tsc_no',old('Tsc_no'), ['class'=>'form-control']) }}
-            @if($errors->has('Tsc_no'))
+            {{ Form::label('tsc_no','TSC Number')  }}
+            {{ Form::number('tsc_no',old('Tsc_no'), ['class'=>'form-control']) }}
+            @if($errors->has('tsc_no'))
                 <p class="help-block text-danger">
-                    <i class="fa fa-exclamation-triangle fa-fw"></i> {{ $errors->first('Tsc_no') }}
+                    <i class="fa fa-exclamation-triangle fa-fw"></i> {{ $errors->first('tsc_no') }}
                 </p>
             @endif
         </div>

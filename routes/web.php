@@ -21,7 +21,7 @@ Route::prefix('user')->middleware('auth')->group(function () {
     # Application group
     Route::prefix('application')->group(function () {
         # Application Details
-        Route::get('details', 'User\ApplicationController@showApplicationDetails');
+        Route::get('details', 'User\ApplicationController@showApplicatRetrieveControllerionDetails');
 
         # Complete application
         Route::get('complete', 'User\ApplicationController@showCompleteApplicationForm');
@@ -30,6 +30,7 @@ Route::prefix('user')->middleware('auth')->group(function () {
         # Edit Application
         Route::get('edit', 'User\ApplicationController@editApplicationDetails');
         Route::post('edit', 'User\ApplicationController@saveEditedApplicationDetails');
+
     });
 });
 
@@ -60,4 +61,13 @@ Route::view('resetemail', 'auth/passwords/email');
 
 Route::view('resetPassword', 'auth/passwords/reset');
 Route::view('details', 'dashboard/user/application/details');
+
+
+Route::get('schools','User\ApplicationController@showSchools');
+//Route::get('showvacancy','User\ApplicationController@showVacancies');
+//>middleware('auth');
+
+//Route::get('school','User\ApplicationController@showVacancies');
+Route::get('school/{school_id}', 'User\ApplicationController@showVacancies');
+
 

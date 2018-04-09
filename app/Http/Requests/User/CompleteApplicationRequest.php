@@ -32,7 +32,10 @@ class CompleteApplicationRequest extends FormRequest
             "education_level"    => "required",
             "sec_school"         => "required",
             "index_no"           => "required",
+            "higher_inst"        => "required",
             "course"             => "required",
+            "subject_taught"     => "required",
+            "next_of_kin_name"   => "required",
             "next_of_kin_phone"  => "required",
             "next_of_kin_email"  => "required",
         ];
@@ -49,7 +52,10 @@ class CompleteApplicationRequest extends FormRequest
             "education_level.required"    => 'Please enter your education level',
             "sec_school.required"         => 'Please enter your schhol',
             "index_no.required"           => 'Please enter your index number',
+            "higher_inst.required"        => 'please enter the institution you studied',
             "course.required"             => 'Please enter the course you studied',
+            "subject_taught.required"     => 'please enter the subjects you can teach',
+            "next_of_kin_name.required"   => 'Please enter enter next of kin phone name',
             "next_of_kin_phone.required"  => 'Please enter enter next of kin phone number',
             "next_of_kin_email.required"  => 'Please enter email',
         ];

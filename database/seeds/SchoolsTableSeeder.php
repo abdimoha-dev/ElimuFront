@@ -16,7 +16,7 @@ class SchoolsTableSeeder extends Seeder
         Headteacher::all()->each(function ($user) {
 
             factory(School::class, 1)->create([
-                'ht_id' => $user->id,
+                'user_id' => $user->id,
             ]);
 
 

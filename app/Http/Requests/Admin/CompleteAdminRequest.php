@@ -25,7 +25,7 @@ class  CompleteAdminRequest extends FormRequest
     public function rules()
     {
         return [
-            'Tsc_no' => 'required|string|max:255',
+            'tsc_no' => 'required|string|max:255',
             'id_no' => 'required|string|max:255',
             'alt_phone' => 'required|string|max:10',
 
@@ -35,7 +35,7 @@ class  CompleteAdminRequest extends FormRequest
     public function messages()
     {
         return [
-            'Tsc_no.required' => 'Please enter your first name',
+            'tsc_no.required' => 'Please enter your TSC Number',
             'id_no.required'=>'Please enter your ID Number',
             'alt_phone.required'=>'Please enter your alternative phone Number',
         ];

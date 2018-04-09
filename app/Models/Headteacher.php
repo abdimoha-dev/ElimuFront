@@ -9,7 +9,7 @@ class Headteacher extends Model
 
     protected $table = 'headteacher';
     protected $fillable = [
-        'Tsc_no',
+        'tsc_no',
         'id_no',
         'user_id',
         'ht_id',
@@ -18,10 +18,12 @@ class Headteacher extends Model
 
     ];
 
-    public function school()
-    {
-        return $this->hasOne('App\Models\School', 'ht_id', 'id');
-    }
+//    public function school()
+//    {
+//        return $this->hasOne('App\Models\School', 'ht_id', 'id');
+//    }
+
+
 
     public function admin()
     {

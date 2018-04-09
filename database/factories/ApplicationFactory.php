@@ -14,7 +14,10 @@ $factory->define(App\Models\Application::class, function (Faker $faker) {
         'year_finished_sec'  => $faker->date,
         'sec_school'         => $faker->name,
         'index_no'           => $faker->randomNumber($nbDigits = NULL, $strict = FALSE),
+        'higher_inst'        => $faker->name,
         'course'             => $faker->name,
+        'subject_taught'     => $faker->name,
+        'next_of_kin_name'   => $faker->name,
         'next_of_kin_phone'  => $faker->e164PhoneNumber,
         'next_of_kin_email'  => $faker->unique()->safeEmail,
     ];

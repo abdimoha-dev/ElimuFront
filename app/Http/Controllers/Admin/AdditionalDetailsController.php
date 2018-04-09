@@ -19,7 +19,7 @@ class AdditionalDetailsController extends Controller
     {
 Headteacher::create([
             'user_id'   => auth()->user()->id,
-            'Tsc_no'    => $request->Tsc_no,
+            'tsc_no'    => $request->tsc_no,
             'id_no'     => $request->id_no,
             'alt_phone' => $request->alt_phone,
         ]);
