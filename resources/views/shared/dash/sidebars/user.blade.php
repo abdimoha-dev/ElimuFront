@@ -22,12 +22,19 @@
             <a href="{{ url('user/application/complete') }}">
                 <i class="fa fa-circle-o"></i> Complete Application
             </a>
-        </li>
+
         <li class="{{ (request()->is('')) ? 'active': '' }}">
-            <a href="#!">
-                <i class="fa fa-circle-o"></i> Edit Application
+            <a href="{{url('user/vacancies/schools')}}">
+                <i class="fa fa-circle-o"></i> Show Available Vacancies
             </a>
         </li>
+        </li>
+        <li class="{{ (request()->is('')) ? 'active': '' }}">
+            <a href="{{url('user/vacancies/schoolvacancy')}}">
+                <i class="fa fa-circle-o"></i> Show Schools Marching My profile
+            </a>
+        </li>
+
     </ul>
 </li>
 

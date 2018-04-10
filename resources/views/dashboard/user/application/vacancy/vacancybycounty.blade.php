@@ -1,23 +1,27 @@
 @extends('layouts.dash')
 @section('content')
-
     <table class="table table-condensed">
         <thead>
         <tr>
-            <th>Vacancy Reference Number</th>
-            <th>Duration For Teaching</th>
-            <th>Subjects Needed</th>
-            <th>Classes To Be Taught</th>
+            <th>School Name</th>
+            <th>Location</th>
+            <th>Address</th>
+            <th>Number Of classe</th>
+            <th>Number Of teachers</th>
+            <th>Number Of Students</th>
+
+
         </tr>
         </thead>
         <tbody>
-        @foreach ($vacancies as $vacancy)
+        @foreach ($counties as $county)
             <tr>
-                <td>{{$vacancy->reference_no}}</td>
-                <td>{{$vacancy->duration}}</td>
-                <td>{{$vacancy->subjects}}</td>
-                <td>{{$vacancy->class}}</td>
-                <td></td>
+                <td>{{$county->name}}</td>
+                <td>{{$county->location}}</td>
+                <td>{{$county->address}}</td>
+                <td>{{$county->no_of_classes}}</td>
+                <td>{{$county->no_of_teachers}}</td>
+                <td>{{$county->no_of_students}}</td>
                 <td></td>
 
             </tr>

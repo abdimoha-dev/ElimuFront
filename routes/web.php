@@ -18,6 +18,21 @@ Route::get('/home', 'HomeController@showUserDashboard')->name('home')->middlewar
 
 #################### USER ######################
 Route::prefix('user')->middleware('auth')->group(function () {
+    #vacancies group
+
+    Route::prefix('vacancies')->group(function (){
+        #Show Vacancies
+
+        Route::get('schools','User\ApplicationController@showSchools');
+
+        Route::get('schoolvacancy', 'User\ApplicationController@vacancybysubjects');
+        Route::get('countyvacancy','User\ApplicationController@vacancybycounty');
+
+        Route::get('county','User\ApplicationController@showvacancybycounty');
+        Route::post('county','User\ApplicationController@vacancybycounty');
+    });
+
+
     # Application group
     Route::prefix('application')->group(function () {
         # Application Details
@@ -26,6 +41,9 @@ Route::prefix('user')->middleware('auth')->group(function () {
         # Complete application
         Route::get('complete', 'User\ApplicationController@showCompleteApplicationForm');
         Route::post('complete', 'User\ApplicationController@saveAdditinalApplicationDetails');
+
+
+
 
         # Edit Application
         Route::get('edit', 'User\ApplicationController@editApplicationDetails');
@@ -63,11 +81,17 @@ Route::view('resetPassword', 'auth/passwords/reset');
 Route::view('details', 'dashboard/user/application/details');
 
 
-Route::get('schools','User\ApplicationController@showSchools');
+
 //Route::get('showvacancy','User\ApplicationController@showVacancies');
 //>middleware('auth');
 
 //Route::get('school','User\ApplicationController@showVacancies');
+//Route::get('school/{school_id}', 'User\ApplicationController@showVacancies');
+
+
 Route::get('school/{school_id}', 'User\ApplicationController@showVacancies');
+
+
+
 
 

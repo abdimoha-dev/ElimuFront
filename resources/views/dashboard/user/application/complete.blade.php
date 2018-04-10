@@ -129,8 +129,10 @@
             @endif
         </div>
 
+
+
         <div class="form-group">
-            {{ Form::label('subject_taught','Subjects You Can Teach}}
+            {{ Form::label('subject_taught','Subjects You can Teach')}}
             {{ Form::text('subject_taught',old('subject_taught'), ['class'=>'form-control']) }}
             @if($errors->has('subject_taught'))
                 <p class="help-block text-danger">
