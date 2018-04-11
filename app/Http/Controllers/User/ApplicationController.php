@@ -67,8 +67,6 @@ class ApplicationController extends Controller
 
     public function showVacancies($id)
     {
-
-
         return view('dashboard.user.application.vacancy.schoolvacancy', [
             'vacancies' => Vacancy::where('school_id', $id)->get(),
 
@@ -76,18 +74,14 @@ class ApplicationController extends Controller
         ]);
 
     }
-    public function showvacancybycounty(){
-        return view('dashboard.user.application.vacancy.location',[
-            'locations'=>Vacancy::where()
 
-        ]);
 
-    }
 
-    public function vacancybycounty(Request $request){
+    public function vacancybycounty(Request $request)
+    {
 //    dd($request->counties);
-        return view('dashboard.user.application.vacancy.vacancybycounty',[
-            'counties'=>School::where('location',$request->counties)->get(),
+        return view('dashboard.user.application.vacancy.vacancybycounty', [
+            'counties' => School::where('location', $request->counties)->get(),
 
         ]);
 
@@ -96,11 +90,11 @@ class ApplicationController extends Controller
     public function vacancybysubjects()
     {
 //       dd(auth()->user()->application->subject_taught);
-       return view('dashboard.user.application.vacancy.subjectsvacancy',[
-           'subjects'=>Vacancy::where('subjects',auth()->user()->application->subject_taught)->get(),
+        return view('dashboard.user.application.vacancy.subjectsvacancy', [
+            'subjects' => Vacancy::where('subjects', auth()->user()->application->subject_taught)->get(),
 //           'schools'=>School::where('school_id',vacancy.school_id)->get(),
 
-       ]);
+        ]);
 
     }
 

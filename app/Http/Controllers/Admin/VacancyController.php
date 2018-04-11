@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\Admin\VacancyRequest;
+use App\Models\Application;
+use App\Models\User;
 use App\Models\Vacancy;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -22,5 +24,43 @@ class VacancyController extends Controller
             'reference_no' =>$request-> reference_no,
             'class'        => $request->class,
         ]);
+    }
+
+    public function allteachersvacancy(){
+
+        return view('dashboard.admin.details.vacancy.teachersvacancy', [
+            'teachers' => User::where('ROLE','USER')->paginate(20),
+
+
+        ]);
+
+    }
+
+    public function showTeachersDetails($id)
+    {
+        return view('dashboard.admin.details.admindetails', [
+            'details' => Application::where('user_id', $id)->get(),
+
+
+        ]);
+
+    }
+
+    public function showMarchingVacancies(){
+//        dd(auth()->user()->school->id);
+        $vacancies=Vacancy::where('school_id',auth()->user()->school->id)->get();
+//   dd($vacancies->subjects);
+
+    foreach ($vacancies as $vacancy){
+       $vacancy->subjects;
+    }
+
+
+
+        return view('dashboard.admin.details.vacancy.applications', [
+            'details' => Application::where('subject_taught', $vacancy->subjects)->paginate(20),
+
+        ]);
+
     }
 }

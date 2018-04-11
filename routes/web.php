@@ -65,6 +65,10 @@ Route::prefix('admin')->group(function () {
 
         Route::get('vacancy','Admin\VacancyController@showVacancyDetails');
         Route::post('vacancy','Admin\VacancyController@AddVacancyDetails');
+
+        Route::get('teachersvacancy','Admin\VacancyController@allteachersvacancy');
+        Route::get('vacancybysubjects','Admin\VacancyController@showMarchingVacancies');
+
     });
 });
 #################### ROOT #######################
@@ -80,16 +84,9 @@ Route::view('resetemail', 'auth/passwords/email');
 Route::view('resetPassword', 'auth/passwords/reset');
 Route::view('details', 'dashboard/user/application/details');
 
-
-
-//Route::get('showvacancy','User\ApplicationController@showVacancies');
-//>middleware('auth');
-
-//Route::get('school','User\ApplicationController@showVacancies');
-//Route::get('school/{school_id}', 'User\ApplicationController@showVacancies');
-
-
+############Show More Details##############
 Route::get('school/{school_id}', 'User\ApplicationController@showVacancies');
+Route::get('vacancy/{user_id}','Admin\VacancyController@showTeachersDetails');
 
 
 

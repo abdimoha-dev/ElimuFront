@@ -29,6 +29,19 @@
         </li>
 
 
+        <li class="{{ (request()->is('')) ? 'active': '' }}">
+            <a href="{{ url('admin/details/teachersvacancy') }}">
+                <i class="fa fa-circle-o"></i> Available Applicants
+            </a>
+        </li>
+
+        <li class="{{ (request()->is('')) ? 'active': '' }}">
+            <a href="{{ url('admin/details/vacancybysubjects') }}">
+                <i class="fa fa-circle-o"></i> vacancy march my profile
+            </a>
+        </li>
+
+
     </ul>
 
 
