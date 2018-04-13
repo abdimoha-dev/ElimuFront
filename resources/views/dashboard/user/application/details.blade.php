@@ -1,19 +1,9 @@
 @extends('layouts.dash')
 @section('content-header')
-    {{--{{ dump($user->first_name) }}--}}
-{{--@section('page-title')--}}
-    {{--<h1>--}}
-        {{--My Application Details--}}
-    {{--</h1>--}}
 
-    {{--<ol class="breadcrumb">--}}
-        {{--<li class="active"><i class="fa fa-dashboard"></i> Home</li>--}}
-        {{--<li><a href="#">Examples</a></li>--}}
-        {{--<li class="active">Blank page</li>--}}
-    {{--</ol>--}}
 @endsection
 
-@if(auth()->user()->role == 'USER')
+@if(auth()->user()->role == 'TEACHER')
     @section('content')
     <a href="#" class="list-group-item">
         <div class="d-flex w-100 justify-content-between">
@@ -51,6 +41,8 @@
 
     </a>
 
+
+    {{--method to access relationship--}}
     @if($user->application)
         <a href="#" class="list-group-item">
             <div class="d-flex w-100 justify-content-between">
@@ -155,9 +147,9 @@
         <p>Please <a class="btn btn-danger" href="{{ url('user/application/complete') }}">complete your application</a></p>
     @endif
 @endsection
-@elseif(auth()->user()->role == 'ADMIN')
+@else(auth()->user()->role == 'ADMIN')
 {{--@section('content')--}}
-@extends('dashboard.admin.home')
+
 
 
     @endsection

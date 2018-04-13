@@ -34,7 +34,6 @@ class User extends Authenticatable
         'remember_token',
     ];
 
-
     public function setPasswordAttribute($value)
     {
         $this->attributes['password'] = Hash::make($value);
@@ -52,6 +51,11 @@ class User extends Authenticatable
     public function application()
     {
         return $this->hasOne('App\Models\Application', 'user_id', 'id');
+    }
+
+    public function subjects(){
+        return $this->hasOne('App\Models\Subject','user_id','id');
+
     }
 
 }

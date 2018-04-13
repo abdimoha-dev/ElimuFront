@@ -15,7 +15,7 @@ class CreateVacancyTable extends Migration
     {
         Schema::create('vacancy', function (Blueprint $table) {
             $table->increments('id');
-            $table->increments('reference_no');
+            $table->string('reference_no');
             $table->string('duration');
             $table->string('subjects');
             $table->string('class');

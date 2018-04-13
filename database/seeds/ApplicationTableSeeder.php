@@ -14,7 +14,7 @@ class ApplicationTableSeeder extends Seeder
     public function run()
     {
         User::all()->each(function ($user) {
-            if ($user->role=='USER') {
+            if ($user->role=='TEACHER') {
                 factory(Application::class, 1)->create([
                     'user_id' => $user->id,
                 ]);

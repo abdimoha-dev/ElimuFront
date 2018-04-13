@@ -11,6 +11,7 @@
             <th>Number Of Students</th>
 
 
+
         </tr>
         </thead>
         <tbody>
@@ -22,6 +23,8 @@
                 <td>{{$county->no_of_classes}}</td>
                 <td>{{$county->no_of_teachers}}</td>
                 <td>{{$county->no_of_students}}</td>
+                <td><a href="{{url('schoolbyvacancy/'.$county->id)}}" class="btn btn-info" role="button">More Details</a></td>
+
                 <td></td>
 
             </tr>

@@ -12,16 +12,7 @@ class Application extends Model
 
     public function users()
     {
-        return $this->belongsTo('App\Models\User','user_id', 'id');
+        return $this->belongsTo('App\Models\User', 'user_id', 'id');
     }
 
-
-//    public function retrieve(){
-////        $this->users();
-//        $titles = DB::table('users')->pluck('title');
-//
-//        foreach ($titles as $title) {
-//            echo $title;
-//        }
-//    }
 }

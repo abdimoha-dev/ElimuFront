@@ -6,7 +6,7 @@
 
 @section('content')
 
-    {!! Form::open(['url'=>'register']) !!}
+    {!! Form::open(['url'=>'register', 'role' =>'form']) !!}
     @csrf
 
     <div class="form-group has-feedback">
@@ -48,7 +48,8 @@
         @endif
     </div>
     
-        {!!  Form::select('user', config('sys.settings.users'));  !!}
+        {!!  Form::select('role', config('sys.settings.users'));  !!}
+
 
         <div class="form-group has-feedback">
         {!! Form::label('email', 'Email') !!}

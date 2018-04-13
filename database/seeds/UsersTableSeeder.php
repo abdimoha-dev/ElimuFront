@@ -19,7 +19,7 @@ class UsersTableSeeder extends Seeder
                 'email'       => 'user@walimu4ne.co.ke',
                 'phone'       => '+254700123456',
                 'password'    => '1234',
-                'role'        => 'USER',
+                'role'        => 'TEACHER',
             ],
             'admin' => [
                 'first_name'  => 'System',
@@ -27,7 +27,7 @@ class UsersTableSeeder extends Seeder
                 'email'       => 'admin@walimu4ne.co.ke',
                 'phone'       => '+254700123457',
                 'password'    => '1234',
-                'role'        => 'ADMIN',
+                'role'        => 'HTEACHER',
             ],
 
             'root' => [

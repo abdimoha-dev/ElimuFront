@@ -8,6 +8,7 @@
             <th>Email</th>
             <th>phone</th>
             <th>More Details</th>
+            {{--<th>Number Of Students</th>--}}
 
 
         </tr>
@@ -19,7 +20,7 @@
                 <td>{{$teacher->second_name}}</td>
                 <td>{{$teacher->email}}</td>
                 <td>{{$teacher->phone}}</td>
-                <td><a href="{{url('vacancy/'.$teacher->id)}}" class="btn btn-info" role="button">More Details</a></td>
+                <td><a href="{{url('details/'.$teacher->id)}}" class="btn btn-info" role="button">More Details</a></td>
                 {{--<td><a href="{{ url('school/'.$school->id)}}" class="btn btn-info" role="button">More Details</a></td>--}}
 
                 <td></td>

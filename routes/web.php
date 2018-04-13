@@ -26,6 +26,7 @@ Route::prefix('user')->middleware('auth')->group(function () {
         Route::get('schools','User\ApplicationController@showSchools');
 
         Route::get('schoolvacancy', 'User\ApplicationController@vacancybysubjects');
+
         Route::get('countyvacancy','User\ApplicationController@vacancybycounty');
 
         Route::get('county','User\ApplicationController@showvacancybycounty');
@@ -36,7 +37,7 @@ Route::prefix('user')->middleware('auth')->group(function () {
     # Application group
     Route::prefix('application')->group(function () {
         # Application Details
-        Route::get('details', 'User\ApplicationController@showApplicatRetrieveControllerionDetails');
+        Route::get('details', 'User\ApplicationController@showApplicationDetails');
 
         # Complete application
         Route::get('complete', 'User\ApplicationController@showCompleteApplicationForm');
@@ -66,8 +67,12 @@ Route::prefix('admin')->group(function () {
         Route::get('vacancy','Admin\VacancyController@showVacancyDetails');
         Route::post('vacancy','Admin\VacancyController@AddVacancyDetails');
 
+        Route::get('schoolvacancy','Admin\VacancyController@showMyVacancies');
+
         Route::get('teachersvacancy','Admin\VacancyController@allteachersvacancy');
         Route::get('vacancybysubjects','Admin\VacancyController@showMarchingVacancies');
+
+
 
     });
 });
@@ -87,6 +92,9 @@ Route::view('details', 'dashboard/user/application/details');
 ############Show More Details##############
 Route::get('school/{school_id}', 'User\ApplicationController@showVacancies');
 Route::get('vacancy/{user_id}','Admin\VacancyController@showTeachersDetails');
+Route::get('schoolvacancy/{vacancy_id}','Admin\VacancyController@vacancyId');
+Route::get('schoolbyvacancy/{school_id}','User\ApplicationController@vacancybyschool');
+//Route::get('relatedsubjects',);
 
 
 

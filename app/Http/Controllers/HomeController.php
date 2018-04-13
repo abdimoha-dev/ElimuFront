@@ -23,9 +23,9 @@ class HomeController extends Controller
      */
     public function showUserDashboard()
     {
-        if (auth()->user()->role == 'USER') {
+        if (auth()->user()->role == 'TEACHER') {
             return view('dashboard.user.home');
-        } else if (auth()->user()->role == 'ADMIN') {
+        } else if (auth()->user()->role == 'HTEACHER') {
             return view('dashboard.admin.home');
         } else if (auth()->user()->role == 'ROOT') {
             return view('dashboard.root.home');

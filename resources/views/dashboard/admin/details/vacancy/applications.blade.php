@@ -3,23 +3,23 @@
     <table class="table table-condensed">
         <thead>
         <tr>
-            <th>First Name</th>
-            <th>Second Name</th>
-            <th>Email</th>
-            <th>phone</th>
-            <th>More Details</th>
+            <th>Id Number</th>
+            <th>Place Of Birth</th>
+            <th>Place Of Residence</th>
+            <th>Year Of Birth</th>
+
 
 
         </tr>
         </thead>
         <tbody>
-        @foreach ($details as $detail)
+        @foreach
+        ($details as $detail)
             <tr>
-                <td>{{$detail->first_name}}</td>
-                <td>{{$detail->second_name}}</td>
-                <td>{{$detail->email}}</td>
-                <td>{{$detail->phone}}</td>
-                <td><a href="{{}}" class="btn btn-info" role="button">More Details</a></td>
+                <td>{{$detail->id_number}}</td>
+                <td>{{$detail->place_of_birth}}</td>
+                <td>{{$detail->place_of_residence}}</td>
+                <td>{{$detail->year_of_birth}}</td>
                 {{--<td><a href="{{ url('school/'.$school->id)}}" class="btn btn-info" role="button">More Details</a></td>--}}
 
                 <td></td>

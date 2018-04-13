@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\Admin\VacancyRequest;
 use App\Models\Application;
+use App\Models\Subject;
 use App\Models\User;
 use App\Models\Vacancy;
 use Illuminate\Http\Request;
@@ -21,15 +22,16 @@ class VacancyController extends Controller
         Vacancy::create([
             'duration'     => $request->duration,
             'subjects'     => $request->subjects,
-            'reference_no' =>$request-> reference_no,
+            'reference_no' => $request->reference_no,
             'class'        => $request->class,
         ]);
     }
 
-    public function allteachersvacancy(){
+    public function allteachersvacancy()
+    {
 
         return view('dashboard.admin.details.vacancy.teachersvacancy', [
-            'teachers' => User::where('ROLE','USER')->paginate(20),
+            'teachers' => User::where('ROLE', 'USER')->paginate(20),
 
 
         ]);
@@ -46,19 +48,21 @@ class VacancyController extends Controller
 
     }
 
-    public function showMarchingVacancies(){
-//        dd(auth()->user()->school->id);
-        $vacancies=Vacancy::where('school_id',auth()->user()->school->id)->get();
-//   dd($vacancies->subjects);
+    public function showMyVacancies()
+    {
+        return view('dashboard.admin.details.vacancy.schoolvacancy', [
+            'vacancies' => Vacancy::where('school_id', auth()->user()->id)->get(),
+        ]);
 
-    foreach ($vacancies as $vacancy){
-       $vacancy->subjects;
     }
 
+    public function vacancyId($id)
+    {
+        $vacancy = Vacancy::find($id);
 
-
-        return view('dashboard.admin.details.vacancy.applications', [
-            'details' => Application::where('subject_taught', $vacancy->subjects)->paginate(20),
+        return view('dashboard.admin.details.vacancy.relatedvacancy', [
+            'teachers' => Application::where('subject_one', $vacancy->subjects)
+                ->orwhere('subject_two', $vacancy->subjects)->get(),
 
         ]);
 
