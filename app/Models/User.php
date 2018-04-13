@@ -34,9 +34,28 @@ class User extends Authenticatable
         'remember_token',
     ];
 
-
     public function setPasswordAttribute($value)
     {
         $this->attributes['password'] = Hash::make($value);
     }
+
+    /**
+     * Defines the relationship between a user and an application
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+
+    public function school(){
+        return $this->hasOne('App\Models\School', 'user_id','id');
+    }
+    public function application()
+    {
+        return $this->hasOne('App\Models\Application', 'user_id', 'id');
+    }
+
+    public function subjects(){
+        return $this->hasOne('App\Models\Subject','user_id','id');
+
+    }
+
 }

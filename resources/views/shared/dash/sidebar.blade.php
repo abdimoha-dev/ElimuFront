@@ -25,9 +25,9 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">MAIN NAVIGATION</li>
-            @if(auth()->user()->role == 'USER')
+            @if(auth()->user()->role == 'TEACHER')
                 @include('shared.dash.sidebars.user')
-            @elseif(auth()->user()->role == 'ADMIN')
+            @elseif(auth()->user()->role == 'HTEACHER')
                 @include('shared.dash.sidebars.admin')
             @elseif(auth()->user()->role == 'ROOT')
                 @include('shared.dash.sidebars.root')

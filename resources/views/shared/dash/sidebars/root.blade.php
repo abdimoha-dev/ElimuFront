@@ -1,52 +1,26 @@
-<li class="treeview active">
-    <a href="#">
-        <i class="fa fa-folder"></i> <span>Examples</span>
-        <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-    </a>
-    <ul class="treeview-menu">
-        <li><a href="invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
-        <li><a href="profile.html"><i class="fa fa-circle-o"></i> Profile</a></li>
-        <li><a href="login.html"><i class="fa fa-circle-o"></i> Login</a></li>
-        <li><a href="register.html"><i class="fa fa-circle-o"></i> Register</a></li>
-        <li><a href="lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
-        <li><a href="404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
-        <li><a href="500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
-        <li class="active"><a href="blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
-        <li><a href="pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li>
-    </ul>
-</li>
+
 <li class="treeview">
     <a href="#">
-        <i class="fa fa-share"></i> <span>Multilevel</span>
+        <i class="fa fa-share"></i> <span>More Details</span>
         <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
     </a>
     <ul class="treeview-menu">
-        <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
-        <li class="treeview">
-            <a href="#"><i class="fa fa-circle-o"></i> Level One
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
+        <li class="{{ (request()->is('#')) ? 'active': '' }}">
+            <a href="{{ url('') }}">
+                <i class="fa fa-circle-o"></i> Application Details
             </a>
-            <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
-                <li class="treeview">
-                    <a href="#"><i class="fa fa-circle-o"></i> Level Two
-                        <span class="pull-right-container">
-                      <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                        <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                    </ul>
-                </li>
-            </ul>
         </li>
-        <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
+        <li class="{{ (request()->is('')) ? 'active': '' }}">
+            <a href="{{ url('admin/details/complete') }}">
+                <i class="fa fa-circle-o"></i> Complete Application
+            </a>
+        </li>
+        <li class="{{ (request()->is('')) ? 'active': '' }}">
+            <a href="#!">
+                <i class="fa fa-circle-o"></i> Edit Application
+            </a>
+        </li>
     </ul>
 </li>

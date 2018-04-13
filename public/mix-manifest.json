@@ -2,6 +2,8 @@
     "/css/site.css": "/css/site.css",
     "/js/site.js": "/js/site.js",
     "/js/scrollreveal.min.js": "/js/scrollreveal.min.js",
+    "/css/auth.css": "/css/auth.css",
+    "/js/auth.js": "/js/auth.js",
     "/css/dash.css": "/css/dash.css",
     "/js/dash.js": "/js/dash.js"
 }

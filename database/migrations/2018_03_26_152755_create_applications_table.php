@@ -24,7 +24,11 @@ class CreateApplicationsTable extends Migration
             $table->string('year_finished_sec');
             $table->string('sec_school');
             $table->string('index_no');
+            $table->string('higher_inst');
             $table->string('course');
+            $table->string('subject_one');
+            $table->string('subject_two');
+            $table->string('next_of_kin_name');
             $table->string('next_of_kin_phone');
             $table->string('next_of_kin_email')->unique();
             $table->timestamps();

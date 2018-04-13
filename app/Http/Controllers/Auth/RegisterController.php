@@ -48,13 +48,15 @@ class RegisterController extends Controller
      */
     public function register(RegisterRequest $registerRequest)
     {
+        //  dd($registerRequest->toArray());
+
         User::create([
             'first_name'  => $registerRequest->first_name,
             'second_name' => $registerRequest->second_name,
             'email'       => $registerRequest->email,
             'phone'       => $registerRequest->phone,
             'password'    => $registerRequest->password,
-            'role'        => 'USER',
+            'role'        => $registerRequest->role,
         ]);
 
         // return Redirect::route('home');
