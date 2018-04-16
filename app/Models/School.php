@@ -12,21 +12,12 @@ class School extends Model
         'location',
         'address',
         'user_id',
+        'email',
         'no_of_classes',
         'no_of_teachers',
         'no_of_students'
-    ];//    public function school()
-//    {
-//        return $this->hasOne('App\Models\School', 'ht_id', 'id');
-//    }
+    ];
 
-
-
-
-//    public function headteacher()
-//    {
-//        return $this->belongsTo('App\Models\Headteacher', 'ht_id', 'id');
-//    }
 
     public function vacancy()
     {

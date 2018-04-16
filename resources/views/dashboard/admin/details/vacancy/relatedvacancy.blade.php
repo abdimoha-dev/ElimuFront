@@ -23,7 +23,7 @@
                 <td>{{$teacher->place_of_residence}}</td>
                 <td>{{$teacher->year_of_birth}}</td>
                 <td>{{$teacher->education_level}}</td>
-                <td><a href="{{}}" class="btn btn-info" role="button">Show Interest</a></td>
+                <td><a href="{{url('interview/'.$teacher->users->email)}}" class="btn btn-info" role="button">Show Interest</a></td>
                 <td></td>
 
             </tr>

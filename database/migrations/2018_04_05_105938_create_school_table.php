@@ -19,6 +19,7 @@ class CreateSchoolTable extends Migration
             $table->string('name');
             $table->string('location');
             $table->string('address');
+            $table->string('email');
             $table->string('no_of_classes');
             $table->string('no_of_teachers');
             $table->string('no_of_students');

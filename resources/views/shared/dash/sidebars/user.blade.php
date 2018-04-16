@@ -1,9 +1,3 @@
-<li class="{{ (request()->is('home')) ? 'active': '' }}">
-    <a href="{{ url('home') }}">
-        <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-    </a>
-</li>
-
 <li class="treeview {{ (request()->is('user/application')) ? 'active': '' }}">
     <a href="#">
         <i class="fa fa-pencil-square-o"></i>

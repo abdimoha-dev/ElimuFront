@@ -1,5 +1,7 @@
 <?php
 
+use App\Mail\ShowInterest;
+
 ################################################
 ##################### SITE #####################
 ################################################
@@ -20,17 +22,17 @@ Route::get('/home', 'HomeController@showUserDashboard')->name('home')->middlewar
 Route::prefix('user')->middleware('auth')->group(function () {
     #vacancies group
 
-    Route::prefix('vacancies')->group(function (){
+    Route::prefix('vacancies')->group(function () {
         #Show Vacancies
 
-        Route::get('schools','User\ApplicationController@showSchools');
+        Route::get('schools', 'User\ApplicationController@showSchools');
 
         Route::get('schoolvacancy', 'User\ApplicationController@vacancybysubjects');
 
-        Route::get('countyvacancy','User\ApplicationController@vacancybycounty');
+        Route::get('countyvacancy', 'User\ApplicationController@vacancybycounty');
 
-        Route::get('county','User\ApplicationController@showvacancybycounty');
-        Route::post('county','User\ApplicationController@vacancybycounty');
+        Route::get('county', 'User\ApplicationController@showvacancybycounty');
+        Route::post('county', 'User\ApplicationController@vacancybycounty');
     });
 
 
@@ -42,8 +44,6 @@ Route::prefix('user')->middleware('auth')->group(function () {
         # Complete application
         Route::get('complete', 'User\ApplicationController@showCompleteApplicationForm');
         Route::post('complete', 'User\ApplicationController@saveAdditinalApplicationDetails');
-
-
 
 
         # Edit Application
@@ -61,17 +61,16 @@ Route::prefix('admin')->group(function () {
         Route::get('complete', 'Admin\AdditionalDetailsController@showAdminDetailsForm');
         Route::post('complete', 'Admin\AdditionalDetailsController@adminAdditinalDetails');
 
-        Route::get('getform','Admin\SchoolDetailsController@showSchoolDetails');
-        Route::post('getform','Admin\SchoolDetailsController@addSchoolDetails');
+        Route::get('getform', 'Admin\SchoolDetailsController@showSchoolDetails');
+        Route::post('getform', 'Admin\SchoolDetailsController@addSchoolDetails');
 
-        Route::get('vacancy','Admin\VacancyController@showVacancyDetails');
-        Route::post('vacancy','Admin\VacancyController@AddVacancyDetails');
+        Route::get('vacancy', 'Admin\VacancyController@showVacancyDetails');
+        Route::post('vacancy', 'Admin\VacancyController@AddVacancyDetails');
 
-        Route::get('schoolvacancy','Admin\VacancyController@showMyVacancies');
+        Route::get('schoolvacancy', 'Admin\VacancyController@showMyVacancies');
 
-        Route::get('teachersvacancy','Admin\VacancyController@allteachersvacancy');
-        Route::get('vacancybysubjects','Admin\VacancyController@showMarchingVacancies');
-
+        Route::get('teachersvacancy', 'Admin\VacancyController@allteachersvacancy');
+        Route::get('vacancybysubjects', 'Admin\VacancyController@showMarchingVacancies');
 
 
     });
@@ -91,12 +90,11 @@ Route::view('details', 'dashboard/user/application/details');
 
 ############Show More Details##############
 Route::get('school/{school_id}', 'User\ApplicationController@showVacancies');
-Route::get('vacancy/{user_id}','Admin\VacancyController@showTeachersDetails');
-Route::get('schoolvacancy/{vacancy_id}','Admin\VacancyController@vacancyId');
-Route::get('schoolbyvacancy/{school_id}','User\ApplicationController@vacancybyschool');
-//Route::get('relatedsubjects',);
+Route::get('vacancy/{user_id}', 'Admin\VacancyController@showTeachersDetails');
+Route::get('schoolvacancy/{vacancy_id}', 'Admin\VacancyController@vacancyId');
+Route::get('schoolbyvacancy/{school_id}', 'User\ApplicationController@vacancybyschool');
 
-
-
-
+###########Emails#####################
+Route::get('emails/{email}', 'EmailController@sendMail');#email to school
+Route::get('interview/{email}','EmailController@interviewInvitation');
 

@@ -7,7 +7,7 @@
     @section('content')
     <a href="#" class="list-group-item">
         <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">First Name: </h5>
+            <h5 class="mb-1"><b>First Name: </b></h5>
 
         </div>
         <p class="mb-1"> {{($user->first_name) }}</p>
@@ -16,7 +16,7 @@
 
     <a href="#" class="list-group-item">
         <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Second Name: </h5>
+            <h5 class="mb-1"><b>Second Name: </b></h5>
 
         </div>
         <p class="mb-1"> {{$user->second_name }}</p>
@@ -25,7 +25,7 @@
 
     <a href="#" class="list-group-item">
         <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Email: </h5>
+            <h5 class="mb-1"><b>Email:</b> </h5>
 
         </div>
         <p class="mb-1">{{$user->email }} </p>
@@ -34,7 +34,7 @@
 
     <a href="#" class="list-group-item">
         <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Phone: </h5>
+            <h5 class="mb-1"><b>Phone:</b> </h5>
 
         </div>
         <p class="mb-1"> {{$user->phone }}</p>
@@ -46,7 +46,7 @@
     @if($user->application)
         <a href="#" class="list-group-item">
             <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">ID Number: </h5>
+                <h5 class="mb-1"><b>ID Number:</b> </h5>
 
             </div>
             <p class="mb-1">{{ $user->application->id_number }} </p>
@@ -55,7 +55,7 @@
 
         <a href="#" class="list-group-item">
             <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Place Of Birth: </h5>
+                <h5 class="mb-1"><b>Place Of Birth: </b></h5>
 
             </div>
             <p class="mb-1">{{ $user->application->place_of_birth}} </p>
@@ -65,7 +65,7 @@
 
         <a href="#" class="list-group-item">
             <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Place Of Residence: </h5>
+                <h5 class="mb-1"><b>Place Of Residence:</b> </h5>
 
             </div>
             <p class="mb-1"> {{$user->application->place_of_residence}}</p>
@@ -74,7 +74,7 @@
 
         <a href="#" class="list-group-item">
             <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Year Of Birth: </h5>
+                <h5 class="mb-1"><b>Year Of Birth:</b> </h5>
 
             </div>
             <p class="mb-1">{{$user->application->year_of_birth}} </p>
@@ -83,7 +83,7 @@
 
         <a href="#" class="list-group-item">
             <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Education Level: </h5>
+                <h5 class="mb-1"><b>Education Level: </b></h5>
 
             </div>
             <p class="mb-1">{{$user->application->education_level}} </p>
@@ -92,7 +92,7 @@
 
         <a href="#" class="list-group-item">
             <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Year Completed Secondary School: </h5>
+                <h5 class="mb-1"><b>Year Completed Secondary School: </b></h5>
 
             </div>
             <p class="mb-1">{{$user->application->year_finished_sec}} </p>
@@ -101,7 +101,7 @@
 
         <a href="#" class="list-group-item">
             <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">School Attended: </h5>
+                <h5 class="mb-1"><b>School Attended:</b> </h5>
 
             </div>
             <p class="mb-1">{{$user->application->sec_school}} </p>
@@ -110,7 +110,7 @@
 
         <a href="#" class="list-group-item">
             <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Index Number: </h5>
+                <h5 class="mb-1"><b>Index Number: </b></h5>
 
             </div>
             <p class="mb-1">{{$user->application->index_no}} </p>
@@ -119,7 +119,7 @@
 
         <a href="#" class="list-group-item">
             <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Course Studied: </h5>
+                <h5 class="mb-1"><b>Course Studied:</b> </h5>
 
             </div>
             <p class="mb-1"> {{$user->application->course}}</p>
@@ -128,7 +128,7 @@
 
         <a href="#" class="list-group-item">
             <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Next Of Kin Number: </h5>
+                <h5 class="mb-1"><b>Next Of Kin Number: </b></h5>
 
             </div>
             <p class="mb-1">{{$user->next_of_kin_phone}} </p>
@@ -137,7 +137,7 @@
 
         <a href="#" class="list-group-item">
             <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Next Of Kin Email: </h5>
+                <h5 class="mb-1"><b>Next Of Kin Email: </b></h5>
 
             </div>
             <p class="mb-1"> {{$user->application->next_of_kin_email}}</p>

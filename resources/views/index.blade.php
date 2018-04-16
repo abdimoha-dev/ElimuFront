@@ -68,29 +68,13 @@
                 <div class="col-lg-12  col-md-12 col-sm-12">
 
                     <h2 data-scroll-reveal="enter from the bottom after 0.1s"><i class="fa fa-circle-o-notch"></i> WELCOME
-                        TO THE EDU-CENTER <i class="fa fa-circle-o-notch"></i></h2>
+                        TO TEACHFRONT CENTER <i class="fa fa-circle-o-notch"></i></h2>
                 </div>
             </div>
         </div>
 
     </div>
     <!--HOME SECTION TAG LINE END-->
-
-    <div id="features-sec" class="container set-pad">
-        <div class="row text-center">
-            <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
-                <h1 data-scroll-reveal="enter from the bottom after 0.2s" class="header-line">FEATURE LIST </h1>
-                <p data-scroll-reveal="enter from the bottom after 0.3s">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                    Aenean commodo.
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                    Aenean commodo.
-                </p>
-            </div>
-
-        </div>
-        <!--/.HEADER LINE END-->
-
 
         <div class="row">
 
@@ -102,8 +86,13 @@
                     <hr />
                     <hr />
                     <p>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                        Aenean commodo .
+                        Education  is  widely  seen  as  one  of  the  most  promising  paths  for  individuals  to
+                        realize  better,  more  productive  lives  and  as  one  of  the  primary  drivers  of  national
+                        economic  development.  The  citizens  and  the  government  of  Kenya  have  invested
+                        heavily in improving both the access and quality of education, in an effort to realize
+                        the  promise  of  education  as  well  as  to  achieve  the  education-
+                        related  Millennium
+                        Development Goals and Vision 2030.
 
                     </p>
                     <a href="#" class="btn btn-info btn-set">ASK THE EXPERT</a>
@@ -116,9 +105,13 @@
                     <hr />
                     <hr />
                     <p>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                        Aenean commodo .
-
+                        Education  is  the  driving  force  of  any  nation  and  like  any  other  organization  or  enterprise,  efficiency,
+                        effectiveness and quality ought to be the cornerstones. Development of educational media programs is
+                        a  means  of  enhancing  these  cornerstones  in  a  teaching/learning  process.  Systems’  thinking  requires
+                        that all components of a system interact in a  complementary manner to support the functioning of the
+                        whole. The objective of this paper is to analyze the education sector in Kenya, examining the roles and
+                        relationships  of  its  sub-sectors  by  application  of  systems  approach,  in  order  to  determine  their
+                        functions or dysfunctions.
                     </p>
                     <a href="#" class="btn btn-info btn-set">ASK THE EXPERT</a>
                 </div>
@@ -126,12 +119,15 @@
             <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.6s">
                 <div class="about-div">
                     <i class="fa fa-magic fa-4x icon-round-border"></i>
-                    <h3>ONE TO ONE STUDY</h3>
+                    <h3>TEACHERS SHORTAGE</h3>
                     <hr />
                     <hr />
                     <p>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                        Aenean commodo .
+                        Teachers in Wajir County have threatened to shutdown all learning institutions as only a few of them are left.
+
+                        They issued the threat on Saturday, noting the few available teachers cannot meet the demand.
+
+                        Close to 200 non-local teachers have left the county due to security concerns following al Shabaab's attack on Qarsa Primary School.
 
                     </p>
                     <a href="#" class="btn btn-info btn-set">ASK THE EXPERT</a>
@@ -141,77 +137,11 @@
 
         </div>
     </div>
-    <!-- FEATURES SECTION END-->
-
-    <div id="faculty-sec">
-        <div class="container set-pad">
-            <div class="row text-center">
-                <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
-                    <h1 data-scroll-reveal="enter from the bottom after 0.1s" class="header-line">OUR FACULTY </h1>
-                    <p data-scroll-reveal="enter from the bottom after 0.3s">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                        Aenean commodo.
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                        Aenean commodo.
-                    </p>
-                </div>
-
-            </div>
-            <!--/.HEADER LINE END-->
-
-            <div class="row">
-
-
-                <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.4s">
-                    <div class="faculty-div">
-                        <img src=" {{ asset('site/img/faculty/1.jpg') }}" class="img-rounded" />
-                        <h3>ROXI CHI LUENA </h3>
-                        <hr />
-                        `
-                        <h4>Desigining <br /> Department</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                            Aenean commodo .
-
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.5s">
-                    <div class="faculty-div">
-                        <img src="{{ asset('site/img/faculty/2.jpg') }}" class="img-rounded" />
-                        <h3>JANE DEO ALEX</h3>
-                        <hr />
-                        <h4>Enginering <br /> Department</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                            Aenean commodo .
-
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.6s">
-                    <div class="faculty-div">
-                        <img src="{{ asset('site/img/faculty/3.jpg') }}" class="img-rounded" />
-                        <h3>RUBY DECORSA</h3>
-                        <hr />
-                        <h4>Management <br /> Department</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                            Aenean commodo .
-
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <!-- FACULTY SECTION END-->
 
     <div id="course-sec" class="container set-pad">
         <div class="row text-center">
             <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
-                <h1 data-scroll-reveal="enter from the bottom after 0.1s" class="header-line">OUR COURSES </h1>
+                <h1 data-scroll-reveal="enter from the bottom after 0.1s" class="header-line">ABOUT US </h1>
                 <p data-scroll-reveal="enter from the bottom after 0.3s">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                     Aenean commodo.
@@ -229,60 +159,7 @@
                 <img src="{{ asset('site/img/building.jpg') }}" class="img-thumbnail" />
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
-                <div class="panel-group" id="accordion">
-                    <div class="panel panel-default" data-scroll-reveal="enter from the bottom after 0.5s">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="collapsed">
-                                    <strong> 350+</strong> DESIGNING COURSES
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapse1" class="panel-collapse collapse" style="height: 0px;">
-                            <div class="panel-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis egestas mauris
-                                    ut vehicula. Cras viverra ac orci ac aliquam. Nulla eget condimentum mauris, eget
-                                    tincidunt est.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default" data-scroll-reveal="enter from the bottom after 0.7s">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="collapsed">
-                                    <strong> 250+</strong> ENGINEERING COURSES
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapse2" class="panel-collapse collapse" style="height: 0px;">
-                            <div class="panel-body">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis egestas mauris
-                                    ut vehicula. Cras viverra ac orci ac aliquam. Nulla eget condimentum mauris, eget
-                                    tincidunt est.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default" data-scroll-reveal="enter from the bottom after 0.9s">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="collapsed">
-                                    <strong> 153+</strong> MANAGEMENT COURSES
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapse3" class="panel-collapse collapse" style="height: 0px;">
-                            <div class="panel-body">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis egestas mauris
-                                    ut vehicula. Cras viverra ac orci ac aliquam. Nulla eget condimentum mauris, eget
-                                    tincidunt est.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
                 <div class="alert alert-info" data-scroll-reveal="enter from the bottom after 1.1s">
                        <span style="font-size:40px;">
                           <strong> 2500 + </strong>
@@ -349,10 +226,10 @@
                 <h2><strong>Our Location </strong></h2>
                 <hr />
                 <div>
-                    <h4>234/80 -UFG , New Street,</h4>
-                    <h4>Switzerland.</h4>
-                    <h4><strong>Call:</strong> + 67-098-907-1269 / 70 / 71 </h4>
-                    <h4><strong>Email: </strong>info@yourdomain.com</h4>
+                    <h4>Pioneer House, Kimathi Street,</h4>
+                    <h4>Nairobi.</h4>
+                    <h4><strong>Call:</strong> +254 712131415 </h4>
+                    <h4><strong>Email: </strong>teachfront@sahan.co.ke</h4>
                 </div>
 
 

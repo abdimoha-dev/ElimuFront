@@ -15,9 +15,7 @@
         <div class="navbar-collapse collapse move-me">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#home">HOME</a></li>
-                <li><a href="#features-sec">FEATURES</a></li>
-                <li><a href="#faculty-sec">FACULTY</a></li>
-                <li><a href="#course-sec">COURSES</a></li>
+                <li><a href="#course-sec">ABOUT US</a></li>
                 <li><a href="#contact-sec">CONTACT</a></li>
                 @if(auth()->check() == FALSE)
                     <li><a href="{{ route('login') }}" class="btn btn-success" style="margin: 1px;">SIGN IN</a></li>
