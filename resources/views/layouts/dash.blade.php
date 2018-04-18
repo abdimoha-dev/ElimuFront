@@ -82,6 +82,9 @@
 
 <script src="{{ asset('js/dash.js') }}"></script>
 
+
+@stack('footer-scripts')
+
 <script>
     $(function () {
         $('.sidebar-menu').tree();
@@ -97,6 +100,11 @@
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
         });
+
+
+
+
+
     })
 </script>
 </body>

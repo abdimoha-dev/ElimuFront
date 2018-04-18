@@ -9,26 +9,24 @@
     <ul class="treeview-menu">
         <li class="{{ (request()->is('')) ? 'active': '' }}">
             <a href="{{ url('user/application/details') }}">
-                <i class="fa fa-circle-o"></i> Application Details
+                <i class="fa fa-circle-o"></i> My Profile
             </a>
         </li>
         <li class="{{ (request()->is('')) ? 'active': '' }}">
             <a href="{{ url('user/application/complete') }}">
-                <i class="fa fa-circle-o"></i> Complete Application
+                <i class="fa fa-circle-o"></i> My Personal & Professional Details
             </a>
+        <li class="{{ (request()->is('')) ? 'active': '' }}">
+            <a href="{{url('user/vacancies/schoolvacancy')}}">
+                <i class="fa fa-circle-o"></i> My Matching Vacancies
+            </a>
+        </li>
 
         <li class="{{ (request()->is('')) ? 'active': '' }}">
             <a href="{{url('user/vacancies/schools')}}">
-                <i class="fa fa-circle-o"></i> Show Available Vacancies
+                <i class="fa fa-circle-o"></i> ALL Available Vacancies
             </a>
         </li>
-        </li>
-        <li class="{{ (request()->is('')) ? 'active': '' }}">
-            <a href="{{url('user/vacancies/schoolvacancy')}}">
-                <i class="fa fa-circle-o"></i> Show Schools Marching My profile
-            </a>
-        </li>
-
     </ul>
 </li>
 

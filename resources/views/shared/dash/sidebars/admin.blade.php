@@ -11,20 +11,19 @@
 
         <li class="{{ (request()->is('')) ? 'active': '' }}">
             <a href="{{ url('admin/details/complete') }}">
-                <i class="fa fa-circle-o"></i> Add My Details
-            </a>
+                <i class="fa fa-circle-o"></i> School Administrator Profile
         </li>
 
         <li class="{{ (request()->is('')) ? 'active': '' }}">
             <a href="{{url('admin/details/getform')}}">
-                <i class="fa fa-circle-o"></i> Add School Details
+                <i class="fa fa-circle-o"></i> School Profile
             </a>
         </li>
 
 
         <li class="{{ (request()->is('')) ? 'active': '' }}">
             <a href="{{ url('admin/details/vacancy') }}">
-                <i class="fa fa-circle-o"></i> Add Vacancy Details
+                <i class="fa fa-circle-o"></i> Post Teaching Vacancy
             </a>
         </li>
 
@@ -54,15 +53,6 @@
 
 </li>
 
-<li>
-    <a href="../calendar.html">
-        <i class="fa fa-calendar"></i> <span>Calendar</span>
-        <span class="pull-right-container">
-              <small class="label pull-right bg-red">3</small>
-              <small class="label pull-right bg-blue">17</small>
-            </span>
-    </a>
-</li>
 <li>
     <a href="../mailbox/mailbox.html">
         <i class="fa fa-envelope"></i> <span>Mailbox</span>

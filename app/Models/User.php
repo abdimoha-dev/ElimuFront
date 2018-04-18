@@ -57,5 +57,12 @@ class User extends Authenticatable
         return $this->hasOne('App\Models\Subject','user_id','id');
 
     }
+    public function sender(){
+        return $this->hasMany('App\Models\Message', 'sender_id', 'id');
+    }
+
+    public function recipient(){
+        return $this->hasMany('App\Models\Message', 'recipient_id', 'id');
+    }
 
 }

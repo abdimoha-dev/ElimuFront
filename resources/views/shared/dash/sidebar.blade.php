@@ -7,7 +7,8 @@
                 <img src="{{ asset('dash/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-                <p>Alexander Pierce</p>
+                {{--getting name for the authenticated user--}}
+                <p>{{auth()->user()->first_name}} {{auth()->user()->second_name}}</p>
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
         </div>

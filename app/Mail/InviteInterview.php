@@ -28,7 +28,6 @@ class InviteInterview extends Mailable
      */
     public function build()
     {
-//        $address = auth()->user()->email;
         $address='abdi.mohammed@sahan.co.ke';
         $name = auth()->user()->first_name;
         $subject = 'Interview Invitation';

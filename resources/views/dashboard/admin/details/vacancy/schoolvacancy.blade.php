@@ -7,7 +7,7 @@
             <th>Vacancy Duration</th>
             <th>Subjects</th>
             <th>Available Teachers</th>
-            {{--<th>Number Of Students</th>--}}
+            <th>Message</th>
 
 
         </tr>
@@ -19,6 +19,7 @@
                 <td>{{$vacancy->duration}}</td>
                 <td>{{$vacancy->subjects}}</td>
                 <td><a href="{{ url('schoolvacancy/'.$vacancy->id)}}" class="btn btn-info" role="button">Available Teachers</a></td>
+
                 <td></td>
 
             </tr>

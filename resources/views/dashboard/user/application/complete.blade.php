@@ -131,12 +131,23 @@
 
 
 
+
         <div class="form-group">
-            {{ Form::label('subject_taught','Subjects You can Teach')}}
-            {{ Form::text('subject_taught',old('subject_taught'), ['class'=>'form-control']) }}
-            @if($errors->has('subject_taught'))
+            {{ Form::label('subject_one','Subjects You can Teach')}}
+            {{ Form::text('subject_one',old('subject_one'), ['class'=>'form-control']) }}
+            @if($errors->has('subject_one'))
                 <p class="help-block text-danger">
-                    <i class="fa fa-exclamation-triangle fa-fw"></i> {{ $errors->first('subject_taught') }}
+                    <i class="fa fa-exclamation-triangle fa-fw"></i> {{ $errors->first('subject_one') }}
+                </p>
+            @endif
+        </div>
+
+        <div class="form-group">
+            {{ Form::label('subject_two','Other Subjects You can Teach')}}
+            {{ Form::text('subject_two',old('subject_two'), ['class'=>'form-control']) }}
+            @if($errors->has('subject_two'))
+                <p class="help-block text-danger">
+                    <i class="fa fa-exclamation-triangle fa-fw"></i> {{ $errors->first('subject_two') }}
                 </p>
             @endif
         </div>

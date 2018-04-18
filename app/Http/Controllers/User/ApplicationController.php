@@ -32,14 +32,15 @@ class ApplicationController extends Controller
             'index_no'           => $request->index_no,
             'higher_inst'        => $request->higher_inst,
             'course'             => $request->course,
-            'subject_taught'     => $request->subject_taught,
+            'subject_one'        => $request->subject_one,
+            'subject_two'        => $request->subject_two,
             'next_of_kin_name'   => $request->next_of_kin_name,
             'next_of_kin_phone'  => $request->next_of_kin_phone,
             'next_of_kin_email'  => $request->next_of_kin_email,
         ]);
 
 
-//        return redirect('home');
+       return redirect('home');
     }
 
     public function showApplicationDetails()//show details for a registered user
@@ -83,7 +84,7 @@ class ApplicationController extends Controller
     {
         return view('dashboard.user.application.vacancy.subjectsvacancy', [
             'subjects' => Vacancy::where('subjects', auth()->user()->application->subject_one)
-                ->orwhere('subjects', auth()->user()->application->subject_two)->get(),
+                ->orwhere('subjects', auth()->user()->application->subject_two)->paginate(10),
 
 
         ]);
@@ -92,8 +93,8 @@ class ApplicationController extends Controller
 
     public function vacancybyschool($id)
     {
-        return view('dashboard.user.application.vacancy.vacancybyschool',[
-            'schools'=>Vacancy::where('school_id',$id)->paginate(10),
+        return view('dashboard.user.application.vacancy.vacancybyschool', [
+            'schools' => Vacancy::where('school_id', $id)->paginate(10),
         ]);
 
     }

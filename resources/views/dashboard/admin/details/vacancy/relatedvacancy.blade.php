@@ -23,7 +23,8 @@
                 <td>{{$teacher->place_of_residence}}</td>
                 <td>{{$teacher->year_of_birth}}</td>
                 <td>{{$teacher->education_level}}</td>
-                <td><a href="{{url('interview/'.$teacher->users->email)}}" class="btn btn-info" role="button">Show Interest</a></td>
+                <td><a href="{{url('interview/'.$teacher->users->email)}}" class="btn btn-info" role="button">Invite for Interview</a></td>
+                <td><a href="{{url('messageform/'.$teacher->users->id)}}" class="btn btn-info" role="button">Message Teacher</a></td>
                 <td></td>
 
             </tr>

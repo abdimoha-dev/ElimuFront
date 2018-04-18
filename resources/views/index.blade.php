@@ -76,7 +76,7 @@
     </div>
     <!--HOME SECTION TAG LINE END-->
 
-        <div class="row">
+        <div class="row " style="padding: 0 3em">
 
 
             <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.4s">

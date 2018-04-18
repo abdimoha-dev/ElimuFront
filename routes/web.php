@@ -98,3 +98,8 @@ Route::get('schoolbyvacancy/{school_id}', 'User\ApplicationController@vacancybys
 Route::get('emails/{email}', 'EmailController@sendMail');#email to school
 Route::get('interview/{email}','EmailController@interviewInvitation');
 
+##################Messages###################
+Route::get('messageform/{id}','Message\MessageController@showMessageForm');
+Route::post('messageform/{id}','Message\MessageController@sendMessage');
+
+Route::get('sentmessages','Message\MessageController@getMessage');
