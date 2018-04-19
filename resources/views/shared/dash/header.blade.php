@@ -1,10 +1,10 @@
 <header class="main-header">
     <!-- Logo -->
-    <a href="../../index2.html" class="logo">
-        <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>A</b>LT</span>
-        <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>Admin</b>LTE</span>
+    <a href="" class="logo">
+        <span><b>TEACH</b>connect</span>
+
+        <img width="40" src="{{ asset('dash/img/teacher-pointing-a-board-with-a-stick(1).png') }}" class="logo-mini" style="display: initial"  alt="User Image">
+
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -21,85 +21,19 @@
             <ul class="nav navbar-nav">
 
                 <li class="dropdown messages-menu">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                        <i class="fa fa-envelope-o"></i>
-                        <span class="label label-success">4</span>
+                    <a href="{{url('sentmessages')}}">
+                        <i class="fa fa-envelope"></i> <span>inbox</span>
+                        <span class="pull-right-container">
+              <small class="label pull-right bg-yellow">12</small>
+
+            </span>
                     </a>
-                    <ul class="dropdown-menu">
-                        <li class="header">You have 4 messages</li>
-                        <li>
-                            <!-- inner menu: contains the actual data -->
-                            <ul class="menu">
-                                <li><!-- start message -->
-                                    <a href="#">
-                                        <div class="pull-left">
-                                            <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-                                        </div>
-                                        <h4>
-                                            Support Team
-                                            <small><i class="fa fa-clock-o"></i> 5 mins</small>
-                                        </h4>
-                                        <p>Why not buy a new awesome theme?</p>
-                                    </a>
-                                </li>
-                                <!-- end message -->
-                                <li>
-                                    <a href="#">
-                                        <div class="pull-left">
-                                            <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
-                                        </div>
-                                        <h4>
-                                            AdminLTE Design Team
-                                            <small><i class="fa fa-clock-o"></i> 2 hours</small>
-                                        </h4>
-                                        <p>Why not buy a new awesome theme?</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="pull-left">
-                                            <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
-                                        </div>
-                                        <h4>
-                                            Developers
-                                            <small><i class="fa fa-clock-o"></i> Today</small>
-                                        </h4>
-                                        <p>Why not buy a new awesome theme?</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="pull-left">
-                                            <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
-                                        </div>
-                                        <h4>
-                                            Sales Department
-                                            <small><i class="fa fa-clock-o"></i> Yesterday</small>
-                                        </h4>
-                                        <p>Why not buy a new awesome theme?</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="pull-left">
-                                            <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
-                                        </div>
-                                        <h4>
-                                            Reviewers
-                                            <small><i class="fa fa-clock-o"></i> 2 days</small>
-                                        </h4>
-                                        <p>Why not buy a new awesome theme?</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="footer"><a href="#">See All Messages</a></li>
-                    </ul>
                 </li>
 
                 <!-- User Account: style can be found in dropdown.less -->
                 <li class="dropdown user user-menu">
                     <a href="#!" class="dropdown-toggle" data-toggle="dropdown">
+                        {{--<img width="30" src="{{ asset('dash/img/teacher-pointing-a-board-with-a-stick.png') }}" class="logo-mini" alt="User Image">--}}
                         <img src="{{ asset('dash/img/user2-160x160.jpg') }}" class="user-image" alt="User Image">
                         <span class="hidden-xs">{{auth()->user()->first_name}} {{auth()->user()->second_name}}</span>
                     </a>
@@ -113,6 +47,7 @@
                                 <small>Member since Nov. 2012</small>
                             </p>
                         </li>
+
                         <!-- Menu Body -->
                         <li class="user-body">
                             <div class="row">

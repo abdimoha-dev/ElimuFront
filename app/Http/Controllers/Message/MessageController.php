@@ -18,7 +18,7 @@ class MessageController extends Controller
         ]);
 
     }
-
+//send message
     public function sendMessage(MessageRequest $request)
     {
 
@@ -28,8 +28,9 @@ class MessageController extends Controller
             'message'      => $request->message,
         ]);
     }
-
-    public function getMessage(){
+//receiver message
+    public function getMessage()
+    {
         return view('dashboard.message.receivemessage', [
             'messages' => Message::where('recipient_id', auth()->user()->id)->paginate(10),
         ]);

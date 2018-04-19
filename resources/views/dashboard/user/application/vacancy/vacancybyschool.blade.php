@@ -19,6 +19,8 @@
                 <td>{{$school->duration}}</td>
                 <td>{{$school->subjects}}</td>
                 <td>{{$school->class}}</td>
+
+
                 <td></td>
                 <td></td>
 

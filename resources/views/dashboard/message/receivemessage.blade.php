@@ -25,7 +25,6 @@
                         <tr>
                             <th>Message</th>
                             <th>From</th>
-                            {{--<th>Sender Id</th>--}}
                             <th>Time</th>
                             <th>Status</th>
                             <th>Read More</th>
@@ -80,7 +79,10 @@
                 <div class="modal-body">
 
                 </div>
+
+
                 <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Reply to Message</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
