@@ -12,7 +12,6 @@ class School extends Model
         'location',
         'address',
         'user_id',
-        'email',
         'no_of_classes',
         'no_of_teachers',
         'no_of_students'

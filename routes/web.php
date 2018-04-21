@@ -28,7 +28,7 @@ Route::prefix('user')->middleware('auth')->group(function () {
         Route::get('schools', 'User\ApplicationController@showSchools');
 
         Route::get('schoolvacancy', 'User\ApplicationController@vacancybysubjects');
-
+        Route::get('countydropdown', 'User\ApplicationController@county');
         Route::get('countyvacancy', 'User\ApplicationController@vacancybycounty');
 
         Route::get('county', 'User\ApplicationController@showvacancybycounty');
@@ -96,10 +96,13 @@ Route::get('schoolbyvacancy/{school_id}', 'User\ApplicationController@vacancybys
 
 ###########Emails#####################
 Route::get('emails/{email}', 'EmailController@sendMail');#email to school
-Route::get('interview/{email}','EmailController@interviewInvitation');
+Route::get('interview/{email}', 'EmailController@interviewInvitation');// email to applicants
+Route::get('confirm/{email}', 'EmailController@emailConfirmation');//email confirmation
+Route::get('check/email/confirmation/{token}','Auth\RegisterController@testtoken'); //on click email confirmation
 
 ##################Messages###################
-Route::get('messageform/{id}','Message\MessageController@showMessageForm');
-Route::post('messageform/{id}','Message\MessageController@sendMessage');
+Route::get('messageform/{id}', 'Message\MessageController@showMessageForm');
+Route::post('messageform/{id}', 'Message\MessageController@sendMessage');
+Route::get('sentmessages', 'Message\MessageController@getMessage');
 
-Route::get('sentmessages','Message\MessageController@getMessage');
+###########CONFIRMATION####################

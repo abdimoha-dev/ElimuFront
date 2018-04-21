@@ -7,8 +7,6 @@
             <th>Vacancy Duration</th>
             <th>Subjects</th>
             <th>Available Teachers</th>
-            <th>Message</th>
-
 
         </tr>
         </thead>

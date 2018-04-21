@@ -7,9 +7,4 @@ use Illuminate\Database\Eloquent\Model;
 class Subject extends Model
 {
     protected $table = 'subjects';
-
-//    public function users()
-//    {
-//        return $this->belongsTo('App\Models\User', 'user_id', 'id');
-//    }
 }

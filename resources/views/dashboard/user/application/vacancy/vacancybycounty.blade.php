@@ -6,8 +6,8 @@
             <th>School Name</th>
             <th>Location</th>
             <th>Address</th>
-            <th>Number Of classe</th>
-            <th>Number Of teachers</th>
+            <th>Number Of Classes</th>
+            <th>Number Of Teachers</th>
             <th>Number Of Students</th>
 
 

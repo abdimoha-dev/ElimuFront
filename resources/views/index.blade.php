@@ -10,20 +10,7 @@
 
                         <div class="flexslider set-flexi" id="main-section">
                             <ul class="slides move-me">
-                                <!-- Slider 01 -->
-                                <li>
-                                    <h3>Delivering Quality Education</h3>
-                                    <h1>THE UNIQUE METHOD</h1>
-                                    <a href="#features-sec" class="btn btn-info btn-lg">
-                                        GET AWESOME
-                                    </a>
-                                    <a href="#features-sec" class="btn btn-success btn-lg">
-                                        FEATURE LIST
-                                    </a>
-                                </li>
-                                <!-- End Slider 01 -->
 
-                                <!-- Slider 02 -->
                                 <li>
                                     <h3>Delivering Quality Education</h3>
                                     <h1>UNMATCHED APPROACH</h1>
@@ -34,20 +21,7 @@
                                         FEATURE LIST
                                     </a>
                                 </li>
-                                <!-- End Slider 02 -->
 
-                                <!-- Slider 03 -->
-                                <li>
-                                    <h3>Delivering Quality Education</h3>
-                                    <h1>AWESOME FACULTY PANEL</h1>
-                                    <a href="#features-sec" class="btn btn-default btn-lg">
-                                        GET AWESOME
-                                    </a>
-                                    <a href="#features-sec" class="btn btn-info btn-lg">
-                                        FEATURE LIST
-                                    </a>
-                                </li>
-                                <!-- End Slider 03 -->
                             </ul>
                         </div>
 
@@ -68,7 +42,7 @@
                 <div class="col-lg-12  col-md-12 col-sm-12">
 
                     <h2 data-scroll-reveal="enter from the bottom after 0.1s"><i class="fa fa-circle-o-notch"></i> WELCOME
-                        TO TEACHFRONT CENTER <i class="fa fa-circle-o-notch"></i></h2>
+                        TO TEACHconnect CENTER <i class="fa fa-circle-o-notch"></i></h2>
                 </div>
             </div>
         </div>

@@ -28,6 +28,35 @@
             </a>
         </li>
     </ul>
+    <ul class="treeview-menu">
+        <li class="{{ (request()->is('')) ? 'active': '' }}">
+            <a href="{{ url('user/application/details') }}">
+                <i class="fa fa-circle-o"></i> My Profile
+            </a>
+        </li>
+        <li class="{{ (request()->is('')) ? 'active': '' }}">
+            <a href="{{ url('user/application/complete') }}">
+                <i class="fa fa-circle-o"></i> My Personal & Professional Details
+            </a>
+        <li class="{{ (request()->is('')) ? 'active': '' }}">
+            <a href="{{url('user/vacancies/schoolvacancy')}}">
+                <i class="fa fa-circle-o"></i> My Matching Vacancies
+            </a>
+        </li>
+
+        <li class="{{ (request()->is('')) ? 'active': '' }}">
+            <a href="{{url('user/vacancies/schools')}}">
+                <i class="fa fa-circle-o"></i> ALL Available Vacancies
+            </a>
+        </li>
+    </ul>
+
+<li>
+    <a href="{{ url('user/vacancies/countydropdown')}}">
+        <i class="treeview"></i> <span>My County Schools</span>
+
+    </a>
+</li>
 </li>
 
 

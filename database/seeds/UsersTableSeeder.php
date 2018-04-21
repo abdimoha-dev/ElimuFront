@@ -37,6 +37,7 @@ class UsersTableSeeder extends Seeder
                 'phone'       => '+254700123458',
                 'password'    => '1234',
                 'role'        => 'ROOT',
+
             ],
         ];
 

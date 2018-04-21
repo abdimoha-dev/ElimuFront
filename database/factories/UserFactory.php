@@ -21,6 +21,6 @@ $factory->define(App\Models\User::class, function (Faker $faker) {
         'phone'          => $faker->e164PhoneNumber,
         'password'       => 'secret',
         'remember_token' => str_random(10),
-        'role'=>array_random(['TEACHER','HTEACHER'])
+        'role'           => array_random(['TEACHER', 'HTEACHER']),
     ];
 });

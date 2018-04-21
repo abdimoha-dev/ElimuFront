@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\Admin\VacancyRequest;
 use App\Models\Application;
-use App\Models\Subject;
 use App\Models\User;
 use App\Models\Vacancy;
 use Illuminate\Http\Request;
@@ -20,13 +19,16 @@ class VacancyController extends Controller
     public function AddVacancyDetails(VacancyRequest $request)
     {
         Vacancy::create([
+
             'duration'     => $request->duration,
             'subjects'     => $request->subjects,
-            'reference_no' => $request->reference_no,
+            'reference_no' => strtoupper(str_random(10)),
             'class'        => $request->class,
+            'school_id'    =>auth()->user()->school->id,
+
         ]);
     }
-
+//getting all the applicant teachers
     public function allteachersvacancy()
     {
 
@@ -37,7 +39,7 @@ class VacancyController extends Controller
         ]);
 
     }
-
+//showing each teachers details
     public function showTeachersDetails($id)
     {
         return view('dashboard.admin.details.admindetails', [
@@ -47,7 +49,7 @@ class VacancyController extends Controller
         ]);
 
     }
-
+//vancancies in a school
     public function showMyVacancies()
     {
         return view('dashboard.admin.details.vacancy.schoolvacancy', [
@@ -55,7 +57,7 @@ class VacancyController extends Controller
         ]);
 
     }
-
+//teachers job application vacancy related to a school
     public function vacancyId($id)
     {
         $vacancy = Vacancy::find($id);

@@ -24,18 +24,7 @@
             <i class="fa fa-times"></i></button>
 
     </div>
-    {{ Form::open(['url'=>'user/vacancies/county', 'role' =>'form'])  }}
-    @csrf
-    {!!  Form::select('counties', config('sys.settings.counties'));  !!}
 
-
-    <div class="box-footer">
-        <button type="submit" class="btn btn-primary">
-            Submit County
-        </button>
-    </div>
-
-    {{ Form::close() }}
 @endsection
 
 @section('content')

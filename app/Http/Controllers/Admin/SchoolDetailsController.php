@@ -17,7 +17,7 @@ class SchoolDetailsController extends Controller
     public function addSchoolDetails(SchoolsDetailsRequest $request)
     {
         School::create([
-//            'school_id'   => auth()->user()->id,
+            'user_id'        => auth()->user()->id,
             'name'           => $request->name,
             'location'       => $request->location,
             'address'        => $request->address,

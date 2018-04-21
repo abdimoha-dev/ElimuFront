@@ -7,8 +7,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#!">
-                <img class="logo-custom" src="{{ asset('site/img/logo180-50.png') }}" alt="" />
+            <a href="" class="logo">
+                <span><b>TEACH</b>connect</span>
+
+                <img width="70" src="{{ asset('dash/img/teacher-pointing-a-board-with-a-stick(1).png') }}" class="logo-mini" style="display: initial" alt="User Image">
+
             </a>
         </div>
 

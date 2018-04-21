@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ConfirmMail;
 use App\Mail\InviteInterview;
 use Illuminate\Http\Request;
 use App\Mail\ShowInterest;
@@ -10,7 +11,7 @@ use Illuminate\Support\Facades\Mail;
 
 class EmailController extends Controller
 {
-    #sending email confirmation to the school
+    #sending email to the school
     public function sendMail($email)
     {
 
@@ -18,7 +19,9 @@ class EmailController extends Controller
 
         return view('mail/mails');
     }
-    public function interviewInvitation($email){
+
+    public function interviewInvitation($email)
+    {
         Mail::to($email)->send(new InviteInterview());
     }
 }

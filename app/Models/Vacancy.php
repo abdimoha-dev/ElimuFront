@@ -9,10 +9,10 @@ class Vacancy extends Model
     protected $table = 'vacancy';
     protected $guarded;
     protected $fillable = [
-        'vacancy_id',
         'reference_no',
         'duration',
         'subjects',
+        'school_id',
         'class',
 
     ];

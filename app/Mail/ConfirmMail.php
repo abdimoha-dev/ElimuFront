@@ -7,20 +7,20 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class ShowInterest extends Mailable
+class ConfirmMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $total;
+    protected $token;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($token)
     {
-
+        $this->token = $token;
     }
 
     /**
@@ -30,14 +30,12 @@ class ShowInterest extends Mailable
      */
     public function build()
     {
-        $address = auth()->user()->email;
-        $name = auth()->user()->first_name;
-        $subject = 'One Interest Shown';
+        $address='teachfront@sahan.co.ke';
+        $name = 'TeachFront admin';
+        $subject = 'Email Confirmation';
 
-        return $this->view('mail.mails')
+        return $this->view('mail.confirmation', ['token' => $this->token])
             ->from($address, $name)
             ->subject($subject);
-
-
     }
 }

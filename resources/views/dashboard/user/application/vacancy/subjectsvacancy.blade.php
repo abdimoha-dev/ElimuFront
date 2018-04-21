@@ -32,9 +32,10 @@
                 <td>{{$subject->duration}}</td>
                 <td>{{$subject->subjects}}</td>
                 <td>{{$subject->class}}</td>
-                <td><a href="{{url('emails/'.$subject->school->email)}}" class="btn btn-info" role="button">Show Interest</a></td>
-                <td><a href="{{url('messageform/'.$subject->school->user_id)}}" class="btn btn-info" role="button">Message School</a></td>
-
+                <td><a href="{{url('emails/'.$subject->school->email)}}" class="btn btn-info" role="button">Show
+                        Interest</a></td>
+                <td><a href="{{url('messageform/'.$subject->school->user_id)}}" class="btn btn-info" role="button">Message
+                        School</a></td>
                 <td></td>
 
             </tr>

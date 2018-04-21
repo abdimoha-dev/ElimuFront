@@ -64,5 +64,8 @@ class User extends Authenticatable
     public function recipient(){
         return $this->hasMany('App\Models\Message', 'recipient_id', 'id');
     }
+    public function confirmation(){
+        return $this->hasOne('App\Models\Confirmation','user_id','id');
+    }
 
 }

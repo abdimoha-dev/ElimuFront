@@ -68,6 +68,10 @@ class ApplicationController extends Controller
         ]);
 
     }
+    //get vacancy dropdown
+    public function county(){
+        return view('dashboard.user.application.vacancy.vacancydropdown');
+    }
 
 
     public function vacancybycounty(Request $request)

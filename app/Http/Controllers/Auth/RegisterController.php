@@ -3,10 +3,14 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Requests\Auth\RegisterRequest;
+use App\Models\Confirmation;
 use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ConfirmMail;
+use phpDocumentor\Reflection\Types\Null_;
 
 class RegisterController extends Controller
 {
@@ -48,18 +52,47 @@ class RegisterController extends Controller
      */
     public function register(RegisterRequest $registerRequest)
     {
-        //  dd($registerRequest->toArray());
 
-        User::create([
+        $user = User::create([
             'first_name'  => $registerRequest->first_name,
             'second_name' => $registerRequest->second_name,
             'email'       => $registerRequest->email,
             'phone'       => $registerRequest->phone,
             'password'    => $registerRequest->password,
             'role'        => $registerRequest->role,
+
         ]);
 
-        // return Redirect::route('home');
+        $confirm = Confirmation::create([
+            'user_id'     => $user->id,
+            'email_token' => str_random(16),
+            'phone_token' => str_random(16),
+        ]);
+
+        $this->confirmemail($user->email, $confirm->email_token);
+
         return redirect('login');
     }
+
+
+    public function confirmemail($email, $token)
+    {
+        Mail::to($email)->send(new ConfirmMail($token));
+
+    }
+
+    public function testtoken($token)
+    {
+
+        if (Confirmation::where('email_token', $token)) {
+            Confirmation::where('email_token', $token)->update(['email_token' => 'NULL']);//UPDATING EMAIL TOKEN TO NULL
+
+            return redirect('login');
+        } else {
+
+
+        }
+    }
+
+
 }

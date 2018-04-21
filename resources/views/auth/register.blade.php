@@ -53,7 +53,7 @@
 
         <div class="form-group has-feedback">
         {!! Form::label('email', 'Email') !!}
-        {!! Form::email('email', old('email'), ['class' => 'form-control', 'placeholder' => '07000000000']) !!}
+        {!! Form::email('email', old('email'), ['class' => 'form-control', 'placeholder' => 'xyz@gmail.com']) !!}
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
         @if($errors->has('email'))
             <span class="invalid-feedback text-danger">
@@ -93,12 +93,7 @@
 
     <div class="row">
         <div class="col-xs-8">
-            {{--<div class="checkbox icheck">--}}
-                {{--<label for="">--}}
-                    {{--<input type="checkbox" value="headteacher">--}}
-                    {{--Sign up as a head teacher--}}
-                {{--</label>--}}
-            {{--</div>--}}
+
         </div>
         <div class="col-xs-4">
             <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
