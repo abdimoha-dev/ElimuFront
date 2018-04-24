@@ -1,6 +1,9 @@
 @extends('layouts.dash')
 
 @section('page-title')
+
+    @include('shared.alerts')
+
     <h1>
         My Dashboard
         <small>it all starts here</small>
