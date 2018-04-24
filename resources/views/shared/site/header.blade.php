@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a href="" class="logo">
-                <span><b>TEACH</b>connect</span>
+                <span><b>ELIMU</b>Front</span>
 
                 <img width="70" src="{{ asset('dash/img/teacher-pointing-a-board-with-a-stick(1).png') }}" class="logo-mini" style="display: initial" alt="User Image">
 

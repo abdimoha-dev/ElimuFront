@@ -3,3 +3,8 @@
 <p>please click on the link to confirm your details... </p>
 
 <a class="btn btn-primary" href="{{ url('check/email/confirmation/'.$token) }} ">Confirm Email</a>
+Regards,
+
+Africa's Talking Team
+
+Email: support@africastalking.com

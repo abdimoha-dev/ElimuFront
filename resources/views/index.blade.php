@@ -38,93 +38,41 @@
     <div class="tag-line">
         <div class="container">
             <div class="row  text-center">
-
-                <div class="col-lg-12  col-md-12 col-sm-12">
-
-                    <h2 data-scroll-reveal="enter from the bottom after 0.1s"><i class="fa fa-circle-o-notch"></i> WELCOME
-                        TO TEACHconnect CENTER <i class="fa fa-circle-o-notch"></i></h2>
+                <div class="containerCentered container">
+                    <div class="center-block span8 col-sm-4" style="margin-left: 25em; display: contents">
+                        <h1 class="pulloutHeadline ">Get your teaching dreams going.</h1>
+                        <h2 class="pulloutPara">Register your teaching experience in your TeachConnet profile  for free and get connected to matching school vacancies in in schools across the country at no cost.</h2>
+                        <h2>For School Administrators, register Your School Profile and Access qualified teachers to fill your school teaching vacancies all for free.</h2>
+                        <a data-pa-click="" class="btn btn-blue-border" data-ga-category="Consumer - Uncookied HP" data-ga-action="Click" data-ga-opt_label="Control - Module 2 - CTA 1" href="http://walimu4ne.test/register" pa-tracked="1">Register Now</a>
+                    </div>
                 </div>
             </div>
         </div>
-
     </div>
     <!--HOME SECTION TAG LINE END-->
+    <section class="row-fluid row panel c1 blue reverseLink three-panel" id="bottomPanel" style="background: #11244b; margin-block-end: -5em; font-size: 20px;border: 25px solid #e9e9f000; color: #FFFFFF;"   >
 
-        <div class="row " style="padding: 0 3em">
-
-
-            <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.4s">
-                <div class="about-div">
-                    <i class="fa fa-paper-plane-o fa-4x icon-round-border"></i>
-                    <h3>Quality Education</h3>
-                    <hr />
-                    <hr />
-                    <p>
-                        Education  is  widely  seen  as  one  of  the  most  promising  paths  for  individuals  to
-                        realize  better,  more  productive  lives  and  as  one  of  the  primary  drivers  of  national
-                        economic  development.  The  citizens  and  the  government  of  Kenya  have  invested
-                        heavily in improving both the access and quality of education, in an effort to realize
-                        the  promise  of  education  as  well  as  to  achieve  the  education-
-                        related  Millennium
-                        Development Goals and Vision 2030.
-
-                    </p>
-                    <a href="#" class="btn btn-info btn-set">ASK THE EXPERT</a>
-                </div>
+        <header class="containerCentered container center-text">
+            <div class="paypal-devices-home"></div>
+            <h2 class="pulloutHeadline" style="margin-left:5em;">Make your teaching skill enrich others through Teachconnect.</h2>
+        </header>
+        <div class="containerCentered container">
+            <div class=" span4 col-sm-4">
+                <h3 class="contentHead medium">Make your skills usefull</h3>
+                <p class="contentPara">Teachers play an extraordinary part in the lives of children for the formative years of their development and the importance of teachers is something that cannot be understated. They involve themselves in moulding their students into responsible citizens of their country.</p>
             </div>
-            <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.5s">
-                <div class="about-div">
-                    <i class="fa fa-bolt fa-4x icon-round-border"></i>
-                    <h3>SYSTEMATIC APPROACH</h3>
-                    <hr />
-                    <hr />
-                    <p>
-                        Education  is  the  driving  force  of  any  nation  and  like  any  other  organization  or  enterprise,  efficiency,
-                        effectiveness and quality ought to be the cornerstones. Development of educational media programs is
-                        a  means  of  enhancing  these  cornerstones  in  a  teaching/learning  process.  Systems’  thinking  requires
-                        that all components of a system interact in a  complementary manner to support the functioning of the
-                        whole. The objective of this paper is to analyze the education sector in Kenya, examining the roles and
-                        relationships  of  its  sub-sectors  by  application  of  systems  approach,  in  order  to  determine  their
-                        functions or dysfunctions.
-                    </p>
-                    <a href="#" class="btn btn-info btn-set">ASK THE EXPERT</a>
-                </div>
+            <div class=" span4 col-sm-4">
+
+                <h3 class="contentHead medium">Accepted country wide</h3>
+                <p class="contentPara">Use teachConnect to connect with over 500 schools in the country both, private schools and public schools at any level.</p>
+
             </div>
-            <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.6s">
-                <div class="about-div">
-                    <i class="fa fa-magic fa-4x icon-round-border"></i>
-                    <h3>TEACHERS SHORTAGE</h3>
-                    <hr />
-                    <hr />
-                    <p>
-                        Teachers in Wajir County have threatened to shutdown all learning institutions as only a few of them are left.
-
-                        They issued the threat on Saturday, noting the few available teachers cannot meet the demand.
-
-                        Close to 200 non-local teachers have left the county due to security concerns following al Shabaab's attack on Qarsa Primary School.
-
-                    </p>
-                    <a href="#" class="btn btn-info btn-set">ASK THE EXPERT</a>
-                </div>
+            <div class=" span4 col-sm-4">
+                <h3 class="contentHead medium">Importance of teachers</h3>
+                <p class="contentPara">Teaching is a sense of satisfaction, inspiration, motivation, happiness, completeness , values, respect, joy and at times regret, that you couldn’t do more. There’s a feeling of responsibility, a requirement of reciprocation, a feedback and some pulls and pushes. It’s a job for some, but for the rest teaching is preaching.</p>
             </div>
-
-
         </div>
-    </div>
-
-    <div id="course-sec" class="container set-pad">
-        <div class="row text-center">
-            <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
-                <h1 data-scroll-reveal="enter from the bottom after 0.1s" class="header-line">ABOUT US </h1>
-                <p data-scroll-reveal="enter from the bottom after 0.3s">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                    Aenean commodo.
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                    Aenean commodo.
-                </p>
-            </div>
-
-        </div>
+    </section>
         <!--/.HEADER LINE END-->
 
 
@@ -138,7 +86,7 @@
                        <span style="font-size:40px;">
                           <strong> 2500 + </strong>
                            <hr />
-                           Centers
+                           <b>Teaching Vacancies</b>
                        </span>
                 </div>
             </div>

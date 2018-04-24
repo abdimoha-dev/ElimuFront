@@ -94,5 +94,13 @@ class RegisterController extends Controller
         }
     }
 
+    public function confimMessage()
+    {
+        if (Confirmation::where('email_token', 'NULL'))
+
+        $request->session()->flash('status', 'Task was successful!');
+
+    }
+
 
 }

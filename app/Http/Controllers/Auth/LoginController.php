@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use App\Models\Confirmation;
 
 class LoginController extends Controller
 {
@@ -48,6 +49,10 @@ class LoginController extends Controller
         if ($this->attemptLogin($request)) {
             return $this->sendLoginResponse($request);
         }
+
+        if (Confirmation::where('email_token', 'NULL'))
+
+            $request->session()->flash('status', 'Email has been Confirmed!');
 
         // If the login attempt was unsuccessful we will increment the number of attempts
         // to login and redirect the user back to the login form. Of course, when this
