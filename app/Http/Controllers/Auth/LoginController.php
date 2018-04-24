@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\Models\Confirmation;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -46,13 +47,16 @@ class LoginController extends Controller
             return $this->sendLockoutResponse($request);
         }
 
-        if ($this->attemptLogin($request)) {
-            return $this->sendLoginResponse($request);
+        if (auth()->attempt(['email' => $request->email, 'password' => $request->password])) {
+
+            session()->flash('success-message', ['Welcome back ' . auth()->user()->first_name . ' ' . auth()->user()->second_name . '!']);
+
+            return redirect()->intended('home');
         }
 
-        if (Confirmation::where('email_token', 'NULL'))
-
-            $request->session()->flash('status', 'Email has been Confirmed!');
+//        if (Confirmation::where('email_token', 'NULL'))
+//
+//            $request->session()->flash('status', 'Email has been Confirmed!');
 
         // If the login attempt was unsuccessful we will increment the number of attempts
         // to login and redirect the user back to the login form. Of course, when this
@@ -60,5 +64,20 @@ class LoginController extends Controller
         $this->incrementLoginAttempts($request);
 
         return $this->sendFailedLoginResponse($request);
+    }
+
+    /**
+     * Log the user out of the application.
+     *
+     * @param  \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
+     */
+    public function logout(Request $request)
+    {
+        $this->guard()->logout();
+
+        $request->session()->invalidate();
+
+        return redirect('login');
     }
 }
