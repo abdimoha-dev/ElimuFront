@@ -1,6 +1,10 @@
 @extends('layouts.dash')
 @section('content')
-
+@section('content-header')
+    <h1>
+        My school vacancy
+    </h1>
+@endsection
     <table class="table table-condensed">
         <thead>
         <tr>
@@ -11,6 +15,7 @@
         </tr>
         </thead>
         <tbody>
+
         @foreach ($vacancies as $vacancy)
             <tr>
                 <td>{{$vacancy->reference_no}}</td>
@@ -22,8 +27,8 @@
 
             </tr>
         @endforeach
+
         </tbody>
 
     </table>
-
 @endsection

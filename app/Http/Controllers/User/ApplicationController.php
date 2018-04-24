@@ -62,8 +62,7 @@ class ApplicationController extends Controller
     public function showVacancies($id)
     {
         return view('dashboard.user.application.vacancy.schoolvacancy', [
-            'vacancies' => Vacancy::where('school_id', $id)->get(),
-
+            'vacancies' => Vacancy::where('school_id', $id)->paginate(10),
 
         ]);
 

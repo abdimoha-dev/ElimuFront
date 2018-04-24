@@ -2,8 +2,7 @@
 
 @section('page-title')
     <h1>
-        My Application
-        <small>additional details</small>
+My school details
     </h1>
 
     <ol class="breadcrumb">

@@ -1,5 +1,10 @@
 @extends('layouts.dash')
 @section('content')
+@section('content-header')
+    <h1>
+        My Application Details
+    </h1>
+@endsection
     <table class="table table-condensed">
         <thead>
         <tr>

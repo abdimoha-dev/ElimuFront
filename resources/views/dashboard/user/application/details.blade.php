@@ -1,6 +1,8 @@
 @extends('layouts.dash')
 @section('content-header')
-
+<h1>
+    My Profile
+</h1>
 @endsection
 
 @if(auth()->user()->role == 'TEACHER')

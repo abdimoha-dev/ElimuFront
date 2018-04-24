@@ -20,6 +20,9 @@
         </tr>
         </thead>
         <tbody>
+
+
+        @if(count($subjects) > 0)
         @foreach ($subjects as $subject)
             <tr>
                 <td>{{$subject->school->name}}</td>
@@ -37,9 +40,15 @@
                 <td><a href="{{url('messageform/'.$subject->school->user_id)}}" class="btn btn-info" role="button">Message
                         School</a></td>
                 <td></td>
-
             </tr>
         @endforeach
+        @else
+            <tr><td col="12"> There are no marching records</td></tr>
+
+
+            @endif
+
+
         </tbody>
 
     </table>

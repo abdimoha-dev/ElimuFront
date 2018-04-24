@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Walimu 4 North Estern'),
+    'name' => env('APP_NAME', 'Elimu Front'),
 
     /*
     |--------------------------------------------------------------------------

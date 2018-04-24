@@ -46,7 +46,7 @@
 
         <li class="{{ (request()->is('')) ? 'active': '' }}">
             <a href="{{url('user/vacancies/schools')}}">
-                <i class="fa fa-circle-o"></i> ALL Available Vacancies
+                <i class="fa fa-circle-o"></i> All Available Vacancies
             </a>
         </li>
     </ul>

@@ -1,5 +1,10 @@
 @extends('layouts.dash')
 @section('content')
+@section('content-header')
+    <h1>
+        vacancy by county
+    </h1>
+@endsection
 
 {{ Form::open(['url'=>'user/vacancies/county', 'role' =>'form'])  }}
 @csrf

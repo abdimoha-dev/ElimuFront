@@ -2,15 +2,9 @@
 
 @section('page-title')
     <h1>
-        My Application
-        <small>additional details</small>
+        More Application Details
     </h1>
 
-    <ol class="breadcrumb">
-        <li class="active"><i class="fa fa-dashboard"></i> Home</li>
-        {{--<li><a href="#">Examples</a></li>--}}
-        {{--<li class="active">Blank page</li>--}}
-    </ol>
 @endsection
 
 @section('content-header')
