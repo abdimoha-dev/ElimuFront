@@ -61,7 +61,6 @@ class VacancyController extends Controller
     public function vacancyId($id)
     {
         $vacancy = Vacancy::find($id);
-
         return view('dashboard.admin.details.vacancy.relatedvacancy', [
             'teachers' => Application::where('subject_one', $vacancy->subjects)
                 ->orwhere('subject_two', $vacancy->subjects)->get(),

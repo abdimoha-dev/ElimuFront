@@ -16,7 +16,7 @@ class UsersTableSeeder extends Seeder
             'user'  => [
                 'first_name'  => 'Regular',
                 'second_name' => 'User',
-                'email'       => 'user@walimu4ne.co.ke',
+                'email'       => 'user@elimufront.co.ke',
                 'phone'       => '+254700123456',
                 'password'    => '1234',
                 'role'        => 'TEACHER',
@@ -24,7 +24,7 @@ class UsersTableSeeder extends Seeder
             'admin' => [
                 'first_name'  => 'System',
                 'second_name' => 'Admin',
-                'email'       => 'admin@walimu4ne.co.ke',
+                'email'       => 'admin@elimufront.co.ke',
                 'phone'       => '+254700123457',
                 'password'    => '1234',
                 'role'        => 'HTEACHER',
@@ -33,7 +33,7 @@ class UsersTableSeeder extends Seeder
             'root' => [
                 'first_name'  => 'Super',
                 'second_name' => 'User',
-                'email'       => 'root@walimu4ne.co.ke',
+                'email'       => 'root@elimufront.co.ke',
                 'phone'       => '+254700123458',
                 'password'    => '1234',
                 'role'        => 'ROOT',

@@ -93,7 +93,6 @@ Route::get('school/{school_id}', 'User\ApplicationController@showVacancies');
 Route::get('vacancy/{user_id}', 'Admin\VacancyController@showTeachersDetails');
 Route::get('schoolvacancy/{vacancy_id}', 'Admin\VacancyController@vacancyId');
 Route::get('schoolbyvacancy/{school_id}', 'User\ApplicationController@vacancybyschool');
-
 ###########Emails#####################
 Route::get('emails/{email}', 'EmailController@sendMail');#email to school
 Route::get('interview/{email}', 'EmailController@interviewInvitation');// email to applicants

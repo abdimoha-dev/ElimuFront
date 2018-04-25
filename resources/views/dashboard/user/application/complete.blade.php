@@ -8,15 +8,6 @@
 @endsection
 
 @section('content-header')
-
-
-    <div class="box-tools pull-right">
-        <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
-                title="Collapse">
-            <i class="fa fa-minus"></i></button>
-        {{--<button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">--}}
-        {{--<i class="fa fa-times"></i></button>--}}
-    </div>
 @endsection
 
 @section('content')
@@ -40,7 +31,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     {{ Form::label('place_of_birth','Place Of Birth')  }}
-                    {{ Form::text('place_of_birth',old('place_of_birth'), ['class'=>'form-control']) }}
+                    {{ Form::text('place_of_birth',old('place_of_birth'), ['class'=>'form-control ' ]) }}
                     @if($errors->has('place_of_birth'))
                         <p class="help-block text-danger">
                             <i class="fa fa-exclamation-triangle fa-fw"></i> {{ $errors->first('place_of_birth') }}
@@ -53,7 +44,7 @@
 
                 <div class="form-group">
                     {{ Form::label('year_of_birth','Year Of Birth')  }}
-                    {{ Form::date('year_of_birth',old('year_of_birth'), ['class'=>'form-control']) }}
+                    {{ Form::date('year_of_birth',old('year_of_birth'), ['class'=>'form-control', 'id'=>'datetimepicker']) }}
                     @if($errors->has('year_of_birth'))
                         <p class="help-block text-danger">
                             <i class="fa fa-exclamation-triangle fa-fw"></i> {{ $errors->first('year_of_birth') }}
@@ -62,17 +53,7 @@
                 </div>
 
             </div>
-            <div class="col-md-4">
-            <div class="form-group">
-                {{ Form::label('year_of_birth','Year Of Birth')  }}
-                {{ Form::date('year_of_birth',old('year_of_birth'), ['class'=>'form-control']) }}
-                @if($errors->has('year_of_birth'))
-                    <p class="help-block text-danger">
-                        <i class="fa fa-exclamation-triangle fa-fw"></i> {{ $errors->first('year_of_birth') }}
-                    </p>
-                @endif
-            </div>
-        </div>
+
             <div class="col-md-4">
                 <div class="form-group">
                     {{ Form::label('place_of_residence','Place Of Residence')  }}
@@ -189,38 +170,37 @@
 
         {{--reference--}}
 
-            <div class="row">
-                <h3 class="box-title">reference</h3>
-                <div class="col-md-4">
-                    <div class="form-group">
-                        {{ Form::label('next_of_kin_name','Refernce')}}
-                        {{ Form::text('next_of_kin_name',old('next_of_kin_phone'), ['class'=>'form-control']) }}
-                        @if($errors->has('next_of_kin_name'))
-                            <p class="help-block text-danger">
-                                <i class="fa fa-exclamation-triangle fa-fw"></i> {{ $errors->first('next_of_kin_name') }}
-                            </p>
-                        @endif
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="form-group">
-                        {{ Form::label('next_of_kin_name','Refernce 2')}}
-                        {{ Form::text('next_of_kin_name',old('next_of_kin_phone'), ['class'=>'form-control']) }}
-                        @if($errors->has('next_of_kin_name'))
-                            <p class="help-block text-danger">
-                                <i class="fa fa-exclamation-triangle fa-fw"></i> {{ $errors->first('next_of_kin_name') }}
-                            </p>
-                        @endif
-                    </div>
-                </div>
-
-                </div>
-
         <div class="row">
+            <h3 class="box-title">Reference</h3>
+            <div class="col-md-4">
+                <div class="form-group">
+                    {{ Form::label('first_reference','Refernce One')}}
+                    {{ Form::text('first_reference',old('first_reference'), ['class'=>'form-control']) }}
+                    @if($errors->has('first_reference'))
+                        <p class="help-block text-danger">
+                            <i class="fa fa-exclamation-triangle fa-fw"></i> {{ $errors->first('first_reference') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
 
             <div class="col-md-4">
-                <h3 class="box-title">Family</h3>
+                <div class="form-group">
+                    {{ Form::label('second_reference','Refernce Two')}}
+                    {{ Form::text('second_reference',old('second_reference'), ['class'=>'form-control']) }}
+                    @if($errors->has('second_reference'))
+                        <p class="help-block text-danger">
+                            <i class="fa fa-exclamation-triangle fa-fw"></i> {{ $errors->first('second_reference') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <h3 class="box-title">Family</h3>
+            <div class="col-md-4">
                 <div class="form-group">
                     {{ Form::label('next_of_kin_name','Next Of Kin Name')}}
                     {{ Form::text('next_of_kin_name',old('next_of_kin_phone'), ['class'=>'form-control']) }}
@@ -234,11 +214,11 @@
             <div class="col-md-4">
 
                 <div class="form-group">
-                    {{ Form::label('next_of_kin_phone','RelationShip')}}
-                    {{ Form::number('next_of_kin_phone',old('next_of_kin_phone'), ['class'=>'form-control']) }}
-                    @if($errors->has('next_of_kin_phone'))
+                    {{ Form::label('relationship','RelationShip')}}
+                    {{ Form::text('relationship',old('relationship'), ['class'=>'form-control']) }}
+                    @if($errors->has('relationship'))
                         <p class="help-block text-danger">
-                            <i class="fa fa-exclamation-triangle fa-fw"></i> {{ $errors->first('next_of_kin_phone') }}
+                            <i class="fa fa-exclamation-triangle fa-fw"></i> {{ $errors->first('relationship') }}
                         </p>
                     @endif
                 </div>
@@ -257,18 +237,21 @@
 
         </div>
 
-            </div>
+
 
     <div class="box-footer">
         <button type="submit" class="btn btn-primary">
             Complete Application
         </button>
     </div>
+    </div>
+
     {{ Form::close() }}
 @endsection
+
+
 
 @section('content-footer')
 
 @endsection
-
 

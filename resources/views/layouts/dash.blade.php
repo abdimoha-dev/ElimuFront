@@ -101,7 +101,9 @@
             }
         });
 
-
+        $('#datetimepicker').datetimepicker({
+            format: 'dd/mm/yyyy'
+        });
 
 
 

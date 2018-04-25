@@ -28,9 +28,11 @@ class CreateApplicationsTable extends Migration
             $table->string('course');
             $table->string('subject_one');
             $table->string('subject_two');
+            $table->string('first_reference');
+            $table->string('second_reference');
             $table->string('next_of_kin_name');
             $table->string('next_of_kin_phone');
-            $table->string('next_of_kin_email')->unique();
+            $table->string('relationship');
             $table->timestamps();
         });
 
