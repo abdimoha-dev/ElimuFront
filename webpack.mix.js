@@ -51,7 +51,8 @@ mix.scripts([
 mix.styles([
     'node_modules/bootstrap/dist/css/bootstrap.min.css',
     'resources/assets/dash/css/AdminLTE.min.css',
-    'resources/assets/dash/css/skins/_all-skins.css'
+    'resources/assets/dash/css/skins/_all-skins.css',
+    'resources/assets/dash/css/custom.css'
 ], 'public/css/dash.css');
 
 mix.scripts([

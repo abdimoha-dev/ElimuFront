@@ -30,7 +30,7 @@
                                 {{$article->body}}
                             </div>
                             <div class="timeline-footer">
-                                <a class="btn btn-primary btn-xs">Read more</a>
+                                <a class="btn btn-primary btn-xs read" data-toggle="modal">Read more</a>
                                 <a class="btn btn-danger btn-xs">Delete</a>
                             </div>
                         </div>
@@ -96,4 +96,45 @@
             <!-- /.col -->
         </div>
     @endforeach
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        $("#div1").load("demo_test.txt");
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Message</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    {{$article->body}}
+                </div>
+
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Comment</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
+
+@push('footer-scripts')
+    <script>
+
+        $(function () {
+
+
+            $('.read').click(function () {
+                $('.modal-body').html(this.value);
+                $('#myModal').modal();
+            })
+
+        })
+
+    </script>
+
+@endpush
+
+

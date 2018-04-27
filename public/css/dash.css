@@ -1792,3 +1792,5 @@
     border-left: 1px solid #d2d6de;
   }
 }
+
+.list-group-item {    padding: 0px 10px; }

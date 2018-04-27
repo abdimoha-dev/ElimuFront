@@ -55,7 +55,7 @@ Route::prefix('user')->middleware('auth')->group(function () {
     });
 
     Route::prefix('news')->group(function () {
-        Route::get('uploaded', 'User\StoryController@stories');
+        Route::get('uploaded', 'User\StoryController@showStories');
     });
 });
 
@@ -88,7 +88,7 @@ Route::prefix('admin')->group(function () {
         Route::get('stories', 'Admin\StoryController@showForm');
         Route::post('stories', 'Admin\StoryController@saveStory');
 
-        Route::get('articles','Admin\StoryController@stories');
+        Route::get('articles', 'Admin\StoryController@stories');
 
     });
 });
