@@ -31,9 +31,6 @@
 @endsection
 
 @section('content')
-    Start creating your amazing application!
+
 @endsection
 
-@section('content-footer')
-    Footer
-@endsection

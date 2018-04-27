@@ -1,6 +1,6 @@
 <header class="main-header">
     <!-- Logo -->
-    <a href="" class="logo">
+    <a href="home/" class="logo">
         <span><b>Elimu</b>Front</span>
 
         <img width="40" src="{{ asset('dash/img/teacher-pointing-a-board-with-a-stick(1).png') }}" class="logo-mini" style="display: initial" alt="User Image">

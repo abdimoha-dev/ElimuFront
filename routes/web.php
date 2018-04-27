@@ -53,6 +53,10 @@ Route::prefix('user')->middleware('auth')->group(function () {
         Route::get('edit', 'User\ApplicationController@editApplicationDetails');//editing user details
         Route::post('edit', 'User\ApplicationController@saveEditedApplicationDetails');
     });
+
+    Route::prefix('news')->group(function () {
+        Route::get('uploaded', 'User\StoryController@stories');
+    });
 });
 
 Route::get('complete', 'Admin\AdditionalDetailsController@showAdditinalDetailsForm');
@@ -79,6 +83,14 @@ Route::prefix('admin')->group(function () {
     Route::prefix('vacancies')->group(function () {
 
     });
+
+    Route::prefix('uploads')->group(function () {
+        Route::get('stories', 'Admin\StoryController@showForm');
+        Route::post('stories', 'Admin\StoryController@saveStory');
+
+        Route::get('articles','Admin\StoryController@stories');
+
+    });
 });
 #################### ROOT #######################
 
@@ -102,7 +114,7 @@ Route::get('schoolvacancy/{vacancy_id}', 'Admin\VacancyController@vacancyId');
 Route::get('emails/{email}', 'EmailController@sendMail');#email to school
 Route::get('interview/{email}', 'EmailController@interviewInvitation');// email to applicants
 Route::get('confirm/{email}', 'EmailController@emailConfirmation');//email confirmation
-Route::get('check/email/confirmation/{token}','Auth\RegisterController@testtoken'); //on click email confirmation
+Route::get('check/email/confirmation/{token}', 'Auth\RegisterController@testtoken'); //on click email confirmation
 
 ##################Messages###################
 Route::get('messageform/{id}', 'Message\MessageController@showMessageForm');

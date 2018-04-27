@@ -1,20 +1,18 @@
 <li class="treeview">
     <a href="#">
         <i class="fa fa-laptop"></i>
-        <span>More Details</span>
+        <span>Add Details</span>
         <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
     </a>
 
     <ul class="treeview-menu">
-
         <li class="{{ (request()->is('')) ? 'active': '' }}">
-            <a href="{{ url('admin/details/complete') }}">
+            <a href="{{url('admin/details/complete')}}">
                 <i class="fa fa-circle-o"></i> School Administrator Profile
-        </li>
-
-        <li class="{{ (request()->is('')) ? 'active': '' }}">
+            </a>
+        </li>        <li class="{{ (request()->is('')) ? 'active': '' }}">
             <a href="{{url('admin/details/getform')}}">
                 <i class="fa fa-circle-o"></i> School Profile
             </a>
@@ -32,21 +30,16 @@
                 <i class="fa fa-circle-o"></i> View My School Vacancies
             </a>
         </li>
-
-
-        {{--<li class="{{ (request()->is('')) ? 'active': '' }}">--}}
-            {{--<a href="{{ url('admin/details/teachersvacancy') }}">--}}
-                {{--<i class="fa fa-circle-o"></i> Available Applicants--}}
-            {{--</a>--}}
-        {{--</li>--}}
-
-        {{--<li class="{{ (request()->is('')) ? 'active': '' }}">--}}
-            {{--<a href="{{ url('admin/details/vacancybysubjects') }}">--}}
-                {{--<i class="fa fa-circle-o"></i> vacancy march my profile--}}
-            {{--</a>--}}
-        {{--</li>--}}
-
-
+        <li class="{{ (request()->is('')) ? 'active': '' }}">
+            <a href="{{ url('admin/uploads/stories') }}">
+                <i class="fa fa-circle-o"></i> Post Story
+            </a>
+        </li>
+        <li class="{{ (request()->is('')) ? 'active': '' }}">
+            <a href="{{ url('admin/uploads/articles') }}">
+                <i class="fa fa-circle-o"></i> News
+            </a>
+        </li>
     </ul>
 
 
