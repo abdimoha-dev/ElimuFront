@@ -33,6 +33,9 @@ Route::prefix('user')->middleware('auth')->group(function () {
 
         Route::get('county', 'User\ApplicationController@showvacancybycounty');
         Route::post('county', 'User\ApplicationController@vacancybycounty');
+        Route::get('school/{school_id}', 'User\ApplicationController@showVacancies');
+        Route::get('schoolbyvacancy/{school_id}', 'User\ApplicationController@vacancybyschool');
+
     });
 
 
@@ -47,9 +50,8 @@ Route::prefix('user')->middleware('auth')->group(function () {
 
 
         # Edit Application
-        Route::get('edit', 'User\ApplicationController@editApplicationDetails');
+        Route::get('edit', 'User\ApplicationController@editApplicationDetails');//editing user details
         Route::post('edit', 'User\ApplicationController@saveEditedApplicationDetails');
-
     });
 });
 
@@ -74,6 +76,9 @@ Route::prefix('admin')->group(function () {
 
 
     });
+    Route::prefix('vacancies')->group(function () {
+
+    });
 });
 #################### ROOT #######################
 
@@ -89,10 +94,10 @@ Route::view('resetPassword', 'auth/passwords/reset');
 Route::view('details', 'dashboard/user/application/details');
 
 ############Show More Details##############
-Route::get('school/{school_id}', 'User\ApplicationController@showVacancies');
+
 Route::get('vacancy/{user_id}', 'Admin\VacancyController@showTeachersDetails');
 Route::get('schoolvacancy/{vacancy_id}', 'Admin\VacancyController@vacancyId');
-Route::get('schoolbyvacancy/{school_id}', 'User\ApplicationController@vacancybyschool');
+
 ###########Emails#####################
 Route::get('emails/{email}', 'EmailController@sendMail');#email to school
 Route::get('interview/{email}', 'EmailController@interviewInvitation');// email to applicants

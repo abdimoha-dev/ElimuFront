@@ -200,6 +200,7 @@
                     </a>
                 </div>
             </div>
+            <a href="{{ url('user/application/edit')}}" class="btn btn-info" role="button">Edit Details</a>
             {{--method to access relationship--}}
             @if($user->application)
 

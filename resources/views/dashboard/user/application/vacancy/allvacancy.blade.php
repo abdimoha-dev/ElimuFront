@@ -25,7 +25,7 @@
                 <td>{{$school->no_of_teachers}}</td>
                 <td>{{$school->no_of_students}}</td>
                 <td>{{$school->NULL}}</td>
-                <td><a href="{{ url('school/'.$school->id)}}" class="btn btn-info" role="button">More Details</a></td>
+                <td><a href="{{ url('user/vacancies/school/'.$school->id)}}" class="btn btn-info" role="button">More Details</a></td>
                 <td></td>
 
             </tr>
