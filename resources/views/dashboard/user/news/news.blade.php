@@ -57,7 +57,7 @@
                                 We are more like Germany, ambitious and misunderstood!
                             </div>
                             <div class="timeline-footer">
-                                <a class="btn btn-warning btn-flat btn-xs">View comment</a>
+                                <a href="{{url('user/comment/mycomment/'.$article->id)}}" class="btn btn-warning btn-flat btn-xs" role="button">View comments</a>
                             </div>
                         </div>
                     </li>
@@ -105,7 +105,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Message</h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">{{$article->tittle}}</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -116,7 +116,6 @@
 
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Comment</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>

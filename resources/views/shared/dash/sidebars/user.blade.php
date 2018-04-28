@@ -29,7 +29,7 @@
         </li>
 
         <li class="{{ (request()->is('')) ? 'active': '' }}">
-            <a href="{{url('user/news/uploaded')}}">
+            <a href="{{url('user/news/articles')}}">
                 <i class="fa fa-circle-o"></i> News
             </a>
         </li>

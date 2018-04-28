@@ -68,7 +68,7 @@ class User extends Authenticatable
         return $this->hasOne('App\Models\Confirmation','user_id','id');
     }
     public function uploads(){
-        return $this->hasMany('App\Models\Upload','user_id','id');
+        return $this->hasMany('App\Models\Article','user_id','id');
     }
 
 }

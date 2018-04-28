@@ -2,8 +2,9 @@
 
 return [
     'users' => [
-        'TEACHER'  => 'Teacher',
-        'HTEACHER' => 'Headteacher',
+        'TEACHER'   => 'Teacher',
+        'HTEACHER'  => 'Headteacher',
+        'PUBLISHER' => 'Publisher',
     ],
 
     'counties' => [
@@ -20,7 +21,7 @@ return [
         '1MARSABIT'       => 'Marsabit',
         'ISIOLO'          => 'Isiolo',
         'MERU'            => 'Meru',
-        'THARAKA-NITHI'        => 'Tharaka-Nithi',
+        'THARAKA-NITHI'   => 'Tharaka-Nithi',
         'EMBU'            => 'Embu',
         'KITUI'           => 'Kitui',
         'MACHAKOS'        => 'Machakos',
@@ -55,10 +56,6 @@ return [
         'KISII'           => 'Kisii',
         'MYAMIRA'         => 'Nyamira',
         'NAIROBI'         => 'Nairobi',
-    ],
-
-    'subjects' => [
-        'MATH' => 'Mathematics',
     ],
 
 ];

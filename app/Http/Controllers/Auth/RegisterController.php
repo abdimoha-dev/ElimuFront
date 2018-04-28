@@ -74,7 +74,7 @@ class RegisterController extends Controller
         return redirect('login');
     }
 
-
+//sending confirmation mails
     public function confirmemail($email, $token)
     {
         Mail::to($email)->send(new ConfirmMail($token));
@@ -90,7 +90,7 @@ class RegisterController extends Controller
             return redirect('login');
         } else {
 
-
+//to Do
         }
     }
 

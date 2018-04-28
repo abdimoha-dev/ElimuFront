@@ -1,4 +1,4 @@
-<header class="main-header">
+<header class="main-header" >
     <!-- Logo -->
     <a href="home/" class="logo">
         <span><b>Elimu</b>Front</span>
@@ -10,7 +10,7 @@
     <nav class="navbar navbar-static-top">
         <!-- Sidebar toggle button-->
 
-        <div class="navbar-custom-menu">
+        <div class="navbar-custom-menu" >
 
             <ul class="nav navbar-nav">
 

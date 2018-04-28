@@ -23,15 +23,10 @@ class ConfirmMail extends Mailable
         $this->token = $token;
     }
 
-    /**
-     * Build the message.
-     *
-     * @return $this
-     */
     public function build()
     {
-        $address='teachfront@sahan.co.ke';
-        $name = 'TeachFront admin';
+        $address = 'teachfront@sahan.co.ke';
+        $name = 'ElimuFront admin';
         $subject = 'Email Confirmation';
 
         return $this->view('mail.confirmation', ['token' => $this->token])

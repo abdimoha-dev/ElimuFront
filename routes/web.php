@@ -55,7 +55,13 @@ Route::prefix('user')->middleware('auth')->group(function () {
     });
 
     Route::prefix('news')->group(function () {
-        Route::get('uploaded', 'User\StoryController@showStories');
+        Route::get('articles', 'User\StoryController@showStories');
+    });
+
+    Route::prefix('comment')->group(function () {
+        Route::get('mycomment/{id}', 'User\StoryController@comment');//show comment form
+        Route::post('mycomment/{id}', 'User\StoryController@saveComment');
+
     });
 });
 
