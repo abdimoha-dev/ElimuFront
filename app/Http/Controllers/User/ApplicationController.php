@@ -42,8 +42,9 @@ class ApplicationController extends Controller
             'relationship'       => $request->relationship,
         ]);
 
+        //show success message and redirect to home
+        return redirect('home')->with(session()->flash('success-message', ['Application Successfull ']));
 
-        return redirect('home');
     }
 
     public function showApplicationDetails()//show details for a registered user
@@ -61,7 +62,7 @@ class ApplicationController extends Controller
 
     }
 
-    public function saveEditedApplicationDetails(EditApplicationRequest$request)
+    public function saveEditedApplicationDetails(EditApplicationRequest $request)
     {
         $apps = Application::find(auth()->user()->id);
         $apps->update([

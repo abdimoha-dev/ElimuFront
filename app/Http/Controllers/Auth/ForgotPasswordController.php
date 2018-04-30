@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\EmailResetRequest;
+use App\Mail\PasswordReset;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
+use Illuminate\Support\Facades\Mail;
 
 class ForgotPasswordController extends Controller
 {
@@ -28,5 +31,12 @@ class ForgotPasswordController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
+    }
+
+    public function passWordReset(EmailResetRequest $request)
+    {
+       // dd($request);
+        Mail::to($request->email)->send(new PasswordReset());
+        return redirect('login');
     }
 }

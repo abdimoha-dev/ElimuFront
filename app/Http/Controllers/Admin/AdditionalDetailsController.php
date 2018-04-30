@@ -18,13 +18,15 @@ class AdditionalDetailsController extends Controller
     public function adminAdditinalDetails(CompleteAdminRequest $request)
     {
         Headteacher::create([
+
             'user_id'   => auth()->user()->id,
             'tsc_no'    => $request->tsc_no,
             'id_no'     => $request->id_no,
             'alt_phone' => $request->alt_phone,
+
         ]);
 
+        return redirect('home')->with(session()->flash('success-message', ['Application Successfull ']));
 
-        return redirect('home');
     }
 }

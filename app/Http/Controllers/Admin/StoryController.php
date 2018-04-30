@@ -21,13 +21,13 @@ class StoryController extends Controller
             'tittle'  => $request->tittle,
             'body'    => $request->body,
         ]);
-
+        return redirect('home');
     }
 
     public function stories()
     {
         return view('dashboard.admin.news.news', [
-            'articles' => Article::whereNotIn('user_id',auth()->user())->orderBy('created_at','desc')->paginate(10),
+            'articles' => Article::whereNotIn('user_id', auth()->user())->orderBy('created_at', 'desc')->paginate(10),
         ]);
     }
 }

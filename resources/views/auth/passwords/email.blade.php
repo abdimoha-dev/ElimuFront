@@ -9,10 +9,8 @@
                     @endif
 
 
-                    {!! Form::open(['url'=>'password.email']) !!}
+                    {!! Form::open(['url'=>'shared/email']) !!}
                         @csrf
-
-
                         <div class="form-group row">
                             {!! Form::label('email', 'Email Address') !!}
                             {!! Form::email('email', old('email'),['class'=>'form-control', 'placeholder'=>'address@gmail.com'] ) !!}
@@ -20,7 +18,7 @@
                             @if($errors->has('email'))
                                 <span class="invalid-feedback text-danger">
                                     <strong>
-                                <i class="fa fa-exclamation-triangle fa-fw"></i> {{$errors-first('email')}}
+                                <i class="fa fa-exclamation-triangle fa-fw"></i> {{$errors->first('email')}}
                                     </strong>
                                 </span>
                                 @endif

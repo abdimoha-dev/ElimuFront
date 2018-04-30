@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CommentRequest extends FormRequest
+class EmailResetRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,16 +24,14 @@ class CommentRequest extends FormRequest
     public function rules()
     {
         return [
-            'comment' => "required",
-            'id'      => "required",
+            'email' => "required",
         ];
     }
 
     public function messages()
     {
         return [
-            "comment.required" => "please enter a comment",
-            "id.required"      => "please enter article id",
+            "email.required" => "please enter your email address",
 
         ];
     }

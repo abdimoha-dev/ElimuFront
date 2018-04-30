@@ -70,5 +70,4 @@ class User extends Authenticatable
     public function uploads(){
         return $this->hasMany('App\Models\Article','user_id','id');
     }
-
 }

@@ -3,6 +3,6 @@
         {{--<b>Version</b> 2.4.0--}}
         Powered by <b><a href="#!">TosPay Limited</a></b>
     </div>
-    <strong>Copyright &copy; {{ date('Y') }} <a href="#!">http://walimu4ne.co.ke</a>.</strong> All rights
+    <strong>Copyright &copy; {{ date('Y') }} <a href="#!">elimufront.co.ke</a>.</strong> All rights
     reserved.
 </footer>

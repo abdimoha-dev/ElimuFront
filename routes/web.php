@@ -33,6 +33,7 @@ Route::prefix('user')->middleware('auth')->group(function () {
 
         Route::get('county', 'User\ApplicationController@showvacancybycounty');
         Route::post('county', 'User\ApplicationController@vacancybycounty');
+
         Route::get('school/{school_id}', 'User\ApplicationController@showVacancies');
         Route::get('schoolbyvacancy/{school_id}', 'User\ApplicationController@vacancybyschool');
 
@@ -60,7 +61,7 @@ Route::prefix('user')->middleware('auth')->group(function () {
 
     Route::prefix('comment')->group(function () {
         Route::get('mycomment/{id}', 'User\StoryController@comment');//show comment form
-        Route::post('mycomment/{id}', 'User\StoryController@saveComment');
+        Route::post('mycomment', 'User\StoryController@saveComment');//save comments
 
     });
 });
@@ -98,6 +99,8 @@ Route::prefix('admin')->group(function () {
 
     });
 });
+
+################SHARED##########################
 #################### ROOT #######################
 
 #################### TESTS ######################
@@ -106,7 +109,9 @@ Route::view('applicationform', 'viewdetails.');
 
 
 ###################RESETTING#####################
-Route::view('resetemail', 'auth/passwords/email');
+//Route::view('resetemail', 'auth/passwords/email');
+Route::post('shared/email', 'Auth\ForgotPasswordController@passWordReset');
+
 
 Route::view('resetPassword', 'auth/passwords/reset');
 Route::view('details', 'dashboard/user/application/details');

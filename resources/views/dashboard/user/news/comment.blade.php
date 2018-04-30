@@ -6,14 +6,15 @@
     </h1>
 @endsection
 <div class=”container”>
-    {{Form::open(['url'=>'user/comment/mycomment/{id}','role'=>'form'])}}
+    {{Form::open(['url'=>'user/comment/mycomment','role'=>'form'])}}
+   @csrf
     <div class="form-group">
-        {{ Form::label('body','Body')  }}
-        {{ Form::textarea('body',old('body'), ['class'=>'form-control ' ]) }}
+        {{ Form::label('comment','Comment')  }}
+        {{ Form::textarea('comment',old('comment'), ['class'=>'form-control ' ]) }}
         {{Form::hidden('id',$id)}}
-        @if($errors->has('body'))
+        @if($errors->has('comment'))
             <p class="help-block text-danger">
-                <i class="fa fa-exclamation-triangle fa-fw"></i> {{ $errors->first('body') }}
+                <i class="fa fa-exclamation-triangle fa-fw"></i> {{ $errors->first('comment') }}
             </p>
         @endif
     </div>

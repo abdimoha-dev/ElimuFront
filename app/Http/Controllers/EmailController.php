@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\ConfirmMail;
 use App\Mail\InviteInterview;
+use App\Mail\PasswordReset;
 use Illuminate\Http\Request;
 use App\Mail\ShowInterest;
 use Illuminate\Support\Facades\Mail;

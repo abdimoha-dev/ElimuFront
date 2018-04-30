@@ -21,16 +21,16 @@ class  StoryController extends Controller
     public function comment($id)
     {
 
-        return view('dashboard/user/news/comment',['id'=>$id]);
+        return view('dashboard/user/news/comment', ['id' => $id]);
     }
 
-    public function saveComment(CommentRequest$request)
+    public function saveComment(CommentRequest $request)
     {
         Comment::create([
             'comment'    => $request->comment,
-            'article_id' =>$request-> $id,
+            'article_id' => $request->id,
         ]);
-
+        return redirect('user/news/articles');
     }
 
 }

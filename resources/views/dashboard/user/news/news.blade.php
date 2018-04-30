@@ -57,7 +57,7 @@
                                 We are more like Germany, ambitious and misunderstood!
                             </div>
                             <div class="timeline-footer">
-                                <a href="{{url('user/comment/mycomment/'.$article->id)}}" class="btn btn-warning btn-flat btn-xs" role="button">View comments</a>
+                                <a href="{{url('user/comment/mycomment/'.$article->id)}}" class="btn btn-warning btn-flat btn-xs" role="button">comment</a>
                             </div>
                         </div>
                     </li>
