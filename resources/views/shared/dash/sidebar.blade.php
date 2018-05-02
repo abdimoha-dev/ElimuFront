@@ -9,7 +9,7 @@
             <div class="pull-left info">
                 {{--getting name for the authenticated user--}}
                 <p>{{auth()->user()->first_name}} {{auth()->user()->second_name}}</p>
-                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                <i class="fa fa-circle text-success"></i> Online
             </div>
         </div>
 

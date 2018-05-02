@@ -35,8 +35,11 @@ class ForgotPasswordController extends Controller
 
     public function passWordReset(EmailResetRequest $request)
     {
-       // dd($request);
+        //dd($request);
         Mail::to($request->email)->send(new PasswordReset());
         return redirect('login');
+    }
+    public function resetform(){
+        return view('auth/passwords/reset');
     }
 }

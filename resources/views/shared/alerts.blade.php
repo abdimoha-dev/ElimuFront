@@ -14,6 +14,7 @@
             $class = 'alert-error';
         }
     }
+
 @endphp
 
 @if(session()->has('success-message') || session()->has('info-message') || session()->has('warning-message') || session()->has('error-message'))

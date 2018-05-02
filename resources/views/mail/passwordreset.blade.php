@@ -2,7 +2,7 @@
 
 <p>please click on the link to redirect to password reset... </p>
 
-<a class="btn btn-primary" href="">Password reset</a>
+<a class="btn btn-primary" href="{{url('auth/passwords/reset')}}">Password reset</a>
 Regards,
 
 Elimu front Talking Team

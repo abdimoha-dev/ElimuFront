@@ -51,12 +51,8 @@ class LoginController extends Controller
 
             session()->flash('success-message', ['Welcome back ' . auth()->user()->first_name . ' ' . auth()->user()->second_name . '!']);
 
-            return redirect()->intended('home');
+            return redirect()->intended('user/news/articles');
         }
-
-//        if (Confirmation::where('email_token', 'NULL'))
-//
-//            $request->session()->flash('status', 'Email has been Confirmed!');
 
         // If the login attempt was unsuccessful we will increment the number of attempts
         // to login and redirect the user back to the login form. Of course, when this

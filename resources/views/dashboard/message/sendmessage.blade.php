@@ -5,8 +5,8 @@
         <div class="col-md-6">
             <div class="box-footer">
                 {{ Form::open(['url'=>'messageform/{id}', 'role' =>'form'])  }}
-                <div class="form-group">
-                    {{ Form::label('message','type your message')  }}
+                <div class="form-group"  style="width: 50em">
+                    {{ Form::label('message','Type Your Message')  }}
                     {{ Form::text('message',old('message'),  ['class'=>'form-control'], ['placeholder'=>'Type Message ...']) }}
                     {{ Form::hidden('recipient_id', $id) }}
                     {{--{{ Form::hidden('recipient_id', $user_id)}}--}}

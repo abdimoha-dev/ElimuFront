@@ -12,6 +12,8 @@ Route::get('/', 'SiteController@showSiteHomePage');
 ################################################
 # Default authentication routes
 Auth::routes();
+//sending sms phone number confirmation
+Route::get('sendsms','Auth\ConfirmPhoneController@index');
 
 ################################################
 ################## DASHBOARD ###################
@@ -61,7 +63,7 @@ Route::prefix('user')->middleware('auth')->group(function () {
 
     Route::prefix('comment')->group(function () {
         Route::get('mycomment/{id}', 'User\StoryController@comment');//show comment form
-        Route::post('mycomment', 'User\StoryController@saveComment');//save comments
+        Route::post('mycomment/{id}', 'User\StoryController@saveComment');//save comments
 
     });
 });
@@ -111,9 +113,10 @@ Route::view('applicationform', 'viewdetails.');
 ###################RESETTING#####################
 //Route::view('resetemail', 'auth/passwords/email');
 Route::post('shared/email', 'Auth\ForgotPasswordController@passWordReset');
+Route::get('auth/passwords/reset','Auth\ForgotPasswordController@resetform');
 
 
-Route::view('resetPassword', 'auth/passwords/reset');
+//Route::view('resetPassword', 'auth/passwords/reset');
 Route::view('details', 'dashboard/user/application/details');
 
 ############Show More Details##############
@@ -133,3 +136,4 @@ Route::post('messageform/{id}', 'Message\MessageController@sendMessage');
 Route::get('sentmessages', 'Message\MessageController@getMessage');
 
 ###########CONFIRMATION####################
+Route::get('sms','HomeController@sms');

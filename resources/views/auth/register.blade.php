@@ -8,7 +8,6 @@
 
     {!! Form::open(['url'=>'register', 'role' =>'form']) !!}
     @csrf
-
     <div class="form-group has-feedback">
         {!! Form::label('first_name', 'First Name') !!}
         {!! Form::text('first_name', old('first_name'), ['class' => 'form-control', 'placeholder' => '*name*']) !!}
@@ -47,11 +46,11 @@
             </span>
         @endif
     </div>
-    
-        {!!  Form::select('role', config('sys.settings.users'));  !!}
+
+    {!!  Form::select('role', config('sys.settings.users'));  !!}
 
 
-        <div class="form-group has-feedback">
+    <div class="form-group has-feedback">
         {!! Form::label('email', 'Email') !!}
         {!! Form::email('email', old('email'), ['class' => 'form-control', 'placeholder' => 'xyz@gmail.com']) !!}
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
@@ -103,5 +102,4 @@
     <!-- /.
 
     {!! Form::close() !!}
-
 @endsection

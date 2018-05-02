@@ -10,7 +10,9 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ConfirmMail;
+use App\Http\Traits\SendSMS;
 use phpDocumentor\Reflection\Types\Null_;
+
 
 class RegisterController extends Controller
 {
@@ -69,7 +71,8 @@ class RegisterController extends Controller
             'phone_token' => str_random(16),
         ]);
 
-        $this->confirmemail($user->email, $confirm->email_token);
+        $this->confirmemail($user->email, $confirm->email_token);// pass phone number to confirmemail
+        $this->index($user->phone);// pass phone number to method index
 
         return redirect('login');
     }
@@ -94,12 +97,11 @@ class RegisterController extends Controller
         }
     }
 
-    public function confimMessage()
+    Use SendSMS;
+
+    public function index($phone)
     {
-        if (Confirmation::where('email_token', 'NULL'))
-
-        $request->session()->flash('status', 'Task was successful!');
-
+        $this->sendSmsMethod($phone);
     }
 
 

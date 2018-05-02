@@ -10,6 +10,7 @@ use App\Http\Controllers\Controller;
 
 class  StoryController extends Controller
 {
+    //show all stories
     public function showStories()
     {
         return view('dashboard.user.news.news', [
@@ -22,8 +23,10 @@ class  StoryController extends Controller
     {
 
         return view('dashboard/user/news/comment', ['id' => $id]);
+
     }
 
+//save comments
     public function saveComment(CommentRequest $request)
     {
         Comment::create([
@@ -32,5 +35,4 @@ class  StoryController extends Controller
         ]);
         return redirect('user/news/articles');
     }
-
 }

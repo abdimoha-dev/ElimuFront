@@ -32,6 +32,7 @@ class PasswordReset extends Mailable
         $name = 'ElimuFront Admin';
         $subject = 'Password Reset';
 
+        //return $this->view('auth.passwords.reset')
         return $this->view('mail.passwordreset')
             ->from($address, $name)
             ->subject($subject);

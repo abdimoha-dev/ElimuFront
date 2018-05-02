@@ -1,5 +1,9 @@
 @extends('layouts.dash')
 @section('content')
+    @include('shared.alerts')
+    <h3>
+       Articles
+    </h3>
     @foreach($articles as $article)
         <div class="row">
             <div class="col-md-12">
@@ -24,8 +28,7 @@
                         <div class="timeline-item">
                             <span class="time"><i class="fa fa-clock-o"></i> {{$article->created_at->toTimeString()}}</span>
 
-                            <class
-                            ="timeline-header"><a href="#">
+                            <class="timeline-header"><a href="#">
                                 <h7>Rwitten by</h7> {{$article->users->first_name}} {{$article->users->second_name}}</a>
 
                             <div class="timeline-body">
@@ -47,7 +50,7 @@
                     <!-- timeline item -->
                     <li>
                         <div class="timeline-item">
-                            <span class="time"><i class="fa fa-clock-o"></i> 27 mins ago</span>
+                            <span class="time"><i class="fa fa-clock-o"></i>  27 min ago</span>
 
                             <h3 class="timeline-header"><a href="#">Jay White</a> commented on your post</h3>
 
@@ -60,6 +63,7 @@
                                 <a href="{{url('user/comment/mycomment/'.$article->id)}}" class="btn btn-warning btn-flat btn-xs" role="button">comment</a>
                             </div>
                         </div>
+
                     </li>
                     <!-- END timeline item -->
 
