@@ -1,22 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "watch": {
-      "test": {
-        "patterns": ["src", "test"],
-        "extensions": "js,jsx",
-        "ignore": "src/vendor/external.min.js",
-        "quiet": true,
-        "legacyWatch": true,
-        "delay": 2500,
-        "test": "tape test/*.js"
-      }
-
-    },
-
+    "watch": "npm run development -- --watch",
     "dev": "npm run development",
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "npm run development -- --watch",
     "watch-poll": "npm run watch -- --watch-poll",
     "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
     "prod": "npm run production",
@@ -45,6 +32,7 @@
     "jquery.easing": "^1.4.1",
     "laravel-echo": "^1.3.5",
     "npm-watch": "^0.3.0",
+    "paginator": "^1.0.0",
     "pusher-js": "^4.2.2",
     "save": "^2.3.2",
     "scrollreveal": "^3.4.0"

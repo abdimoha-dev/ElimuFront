@@ -8,7 +8,6 @@
     <table class="table table-condensed">
         <thead>
         <tr>
-            <th>School Name</th>
             <th>Vacancy Reference Number</th>
             <th>Duration For Teaching</th>
             <th>Subjects Needed</th>
@@ -16,22 +15,26 @@
         </tr>
         </thead>
         <tbody>
-        @foreach ($schools as $school)
+
+        @foreach ($vacancies as $vacancy)
             <tr>
-                <td>{{$school->School->name}}</td>
-                <td>{{$school->reference_no}}</td>
-                <td>{{$school->duration}}</td>
-                <td>{{$school->subjects}}</td>
-                <td>{{$school->class}}</td>
-
-
+                <td>{{$vacancy->reference_no}}</td>
+                <td>{{$vacancy->duration}}</td>
+                <td>{{$vacancy->subjects}}</td>
+                <td>{{$vacancy->class}}</td>
                 <td></td>
                 <td></td>
 
             </tr>
         @endforeach
+
         </tbody>
 
     </table>
+@endsection
+@section('content-footer')
 
+    <div class="pagination-wrapper">
+        {{ $vacancies->links() }}
+    </div>
 @endsection

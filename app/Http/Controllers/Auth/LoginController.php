@@ -4,9 +4,12 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
+use App\Models\User;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\Models\Confirmation;
 use Illuminate\Http\Request;
+use phpDocumentor\Reflection\Types\Null_;
 
 class LoginController extends Controller
 {
@@ -38,6 +41,7 @@ class LoginController extends Controller
 
     public function login(LoginRequest $request)
     {
+        $var=6;
         // If the class is using the ThrottlesLogins trait, we can automatically throttle
         // the login attempts for this application. We'll key this by the username and
         // the IP address of the client making these requests into this application.
@@ -48,10 +52,9 @@ class LoginController extends Controller
         }
 
         if (auth()->attempt(['email' => $request->email, 'password' => $request->password])) {
-
-            session()->flash('success-message', ['Welcome back ' . auth()->user()->first_name . ' ' . auth()->user()->second_name . '!']);
-
-            return redirect()->intended('user/news/articles');
+            session()->flash('success-message',
+                ['Welcome back ' . auth()->user()->first_name . ' ' . auth()->user()->second_name . '!']);
+            return redirect()->intended('/home');
         }
 
         // If the login attempt was unsuccessful we will increment the number of attempts

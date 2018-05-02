@@ -11,6 +11,7 @@ class Confirmation extends Model
         'user_id',
         'email_token',
         'phone_token',
+        'sms_code',
 
     ];
 

@@ -35,3 +35,13 @@
     </table>
 
 @endsection
+@section('content-footer')
+    <div class="showing pull-left" >
+        Showing {{ $schools->firstItem() }} to {{ $schools->lastItem() }} of {{ $schools->total() }} entries
+    </div>
+
+    <div class="pagination-wrapper pull-right">
+        {!! $schools->links('vendor.pagination.bootstrap-4') !!}
+    </div>
+@endsection
+

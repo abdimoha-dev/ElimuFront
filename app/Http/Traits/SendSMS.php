@@ -16,7 +16,7 @@ Use App\Http\Library\AfricasTalking\AfricasTalkingGatewayException;
 
 trait SendSMS
 {
-    public function sendSmsMethod($phone)
+    public function send($phone, $sms_code, $phone_token)
     {
 // Be sure to include the file you've just downloaded
 
@@ -27,7 +27,7 @@ trait SendSMS
 // Please ensure you include the country code (+254 for Kenya in this case)
         $recipients = $phone;
 // And of course we want our recipients to know what we really do
-        $message = "Please confirm your phone number";
+        $message = 'please click '. url('elimufront/check/phone/confirmation/'.$phone_token .'Enter the following Code '.$sms_code);
 // Create a new instance of our awesome gateway class
         $gateway = new AfricasTalkingGateway($username, $apikey);
         /*************************************************************************************

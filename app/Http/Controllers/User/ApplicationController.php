@@ -88,14 +88,14 @@ class ApplicationController extends Controller
 
     public function showSchools()
     {
-        return view('dashboard.user.application.vacancy.allvacancy', [
-            'schools' => School::paginate(15),
+        return view('dashboard.user.vacancy.allvacancy', [
+            'schools' => School::paginate(5),
         ]);
     }
 
     public function showVacancies($id)
     {
-        return view('dashboard.user.application.vacancy.schoolvacancy', [
+        return view('dashboard.user.vacancy.schoolvacancy', [
             'vacancies' => Vacancy::where('school_id', $id)->paginate(10),
         ]);
     }
@@ -103,21 +103,21 @@ class ApplicationController extends Controller
     //get vacancy dropdown
     public function county()
     {
-        return view('dashboard.user.application.vacancy.vacancydropdown');
+        return view('dashboard.user.vacancy.vacancydropdown');
     }
 
 
     public function vacancybycounty(Request $request)
     {
 
-        return view('dashboard.user.application.vacancy.vacancybycounty', [
+        return view('dashboard.user.vacancy.vacancybycounty', [
             'counties' => School::where('location', $request->counties)->get(),
         ]);
     }
 
     public function vacancybysubjects()
     {
-        return view('dashboard.user.application.vacancy.subjectsvacancy', [
+        return view('dashboard.user.vacancy.subjectsvacancy', [
             'subjects' => Vacancy::where('subjects', auth()->user()->application->subject_one)
                 ->orwhere('subjects', auth()->user()->application->subject_two)->paginate(10),
         ]);
@@ -125,7 +125,7 @@ class ApplicationController extends Controller
 
     public function vacancybyschool($id)
     {
-        return view('dashboard.user.application.vacancy.vacancybyschool', [
+        return view('dashboard.user.vacancy.vacancybyschool', [
             'schools' => Vacancy::where('school_id', $id)->paginate(10),
         ]);
     }

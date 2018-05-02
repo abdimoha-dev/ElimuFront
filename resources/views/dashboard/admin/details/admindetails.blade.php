@@ -47,3 +47,9 @@
     </table>
 
 @endsection
+@section('content-footer')
+
+    <div class="pagination-wrapper">
+        {{ $details->links() }}
+    </div>
+@endsection

@@ -39,3 +39,9 @@
     </table>
 
 @endsection
+@section('content-footer')
+
+    <div class="pagination-wrapper">
+        {{ $counties->links() }}
+    </div>
+@endsection

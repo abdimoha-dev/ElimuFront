@@ -17,9 +17,7 @@
 @endsection
 
 @section('content-header')
-    <h3 class="box-title">Title</h3>
 
-{{--body--}}
 
 @endsection
 

@@ -15,9 +15,10 @@ class CreateConfirmationsTable extends Migration
     {
         Schema::create('confirmations', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('user_id');
             $table->string('email_token');
             $table->string('phone_token');
-            $table->string('user_id');
+            $table->string('sms_code');
             $table->timestamps();
         });
     }

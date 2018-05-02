@@ -37,3 +37,9 @@
     </table>
 
 @endsection
+@section('content-footer')
+
+    <div class="pagination-wrapper">
+        {{ $teachers->links() }}
+    </div>
+@endsection

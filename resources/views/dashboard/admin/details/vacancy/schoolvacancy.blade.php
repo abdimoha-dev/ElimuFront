@@ -32,3 +32,9 @@
     </table>
 
 @endsection
+@section('content-footer')
+
+    <div class="pagination-wrapper">
+        {{ $vacancies->links() }}
+    </div>
+@endsection

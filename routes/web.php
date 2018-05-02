@@ -12,6 +12,10 @@ Route::get('/', 'SiteController@showSiteHomePage');
 ################################################
 # Default authentication routes
 Auth::routes();
+
+Route::get('confirm/{email}', 'EmailController@emailConfirmation');//email confirmation
+Route::get('check/email/confirmation/{token}', 'Auth\RegisterController@testtoken'); //on click email confirmation
+Route::get('check/phone/confirmation/{sms_code}','Auth\RegisterController@confirmPhone');
 //sending sms phone number confirmation
 Route::get('sendsms','Auth\ConfirmPhoneController@index');
 
@@ -127,8 +131,7 @@ Route::get('schoolvacancy/{vacancy_id}', 'Admin\VacancyController@vacancyId');
 ###########Emails#####################
 Route::get('emails/{email}', 'EmailController@sendMail');#email to school
 Route::get('interview/{email}', 'EmailController@interviewInvitation');// email to applicants
-Route::get('confirm/{email}', 'EmailController@emailConfirmation');//email confirmation
-Route::get('check/email/confirmation/{token}', 'Auth\RegisterController@testtoken'); //on click email confirmation
+
 
 ##################Messages###################
 Route::get('messageform/{id}', 'Message\MessageController@showMessageForm');
