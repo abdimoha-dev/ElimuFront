@@ -15,7 +15,7 @@ Auth::routes();
 
 Route::get('confirm/{email}', 'EmailController@emailConfirmation');//email confirmation
 Route::get('check/email/confirmation/{token}', 'Auth\RegisterController@testtoken'); //on click email confirmation
-Route::get('check/phone/confirmation/{sms_code}','Auth\RegisterController@confirmPhone');
+Route::post('check/phone/confirmation','Auth\RegisterController@phoneCode');
 //sending sms phone number confirmation
 Route::get('sendsms','Auth\ConfirmPhoneController@index');
 
