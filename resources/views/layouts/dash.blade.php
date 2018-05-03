@@ -30,8 +30,10 @@
 @include('shared.dash.sidebar')
 
 <!-- =============================================== -->
-
-    <!-- Content Wrapper. Contains page content -->
+@if(!auth()->user()->phone_token)
+    @include('auth.modal')
+@endif
+<!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
@@ -104,7 +106,6 @@
         $('#datetimepicker').datetimepicker({
             format: 'dd/mm/yyyy'
         });
-
 
 
     })

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Requests\Auth\RegisterRequest;
+use App\Http\Requests\Auth\SmsCodeRequest;
 use App\Models\Confirmation;
 use App\Models\User;
 use App\Http\Controllers\Controller;
@@ -117,11 +118,20 @@ class RegisterController extends Controller
         }
     }
 
-    public function phoneCode($sms_code)
+    public function phoneCode(SmsCodeRequest$request)
     {
-        if (Confirmation::where(Auth()->user()->users->sms_code !== NULL)) {
-            Return view('smscode', [Confirmation::where()]);
-        }
+       $conf=Confirmation::where('sms_code',$request->sms_code);
+       if ($conf){
+          $conf->update([
+              'phone_code'=> NULL,
+           ]);
+           return view('dashboard.user.home')->with('Code verified');
+       }
+       else
+       {
+           return view('dashboard.user.home')->with('Code has not been verified');
+       }
+
     }
 
 
