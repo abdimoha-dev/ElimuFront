@@ -89,7 +89,7 @@ class ApplicationController extends Controller
     public function showSchools()
     {
         return view('dashboard.user.vacancy.allvacancy', [
-            'schools' => School::paginate(5),
+            'schools' => School::paginate(10),
         ]);
     }
 

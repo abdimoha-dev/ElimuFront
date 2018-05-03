@@ -16,7 +16,7 @@
     @csrf
     @if(auth()->user()->role == 'TEACHER')
         <div class="box-body">
-            <div class="row">
+            <div class="row align-baseline">
                 <h3 class="box-title">Personal Details</h3>
 
 
@@ -61,7 +61,7 @@
 
             {{--education--}}
 
-            <div class="row">
+            <div class="row align-baseline">
                 <h3 class="box-title">Education</h3>
                 <div class="col-md-4">
                     <div class="form-group">

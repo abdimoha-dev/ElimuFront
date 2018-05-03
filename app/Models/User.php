@@ -46,29 +46,44 @@ class User extends Authenticatable
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
 
-    public function school(){
-        return $this->hasOne('App\Models\School', 'user_id','id');
+    public function school()
+    {
+        return $this->hasOne('App\Models\School', 'user_id', 'id');
     }
+
     public function application()
     {
         return $this->hasOne('App\Models\Application', 'user_id', 'id');
     }
 
-    public function subjects(){
-        return $this->hasOne('App\Models\Subject','user_id','id');
+    public function subjects()
+    {
+        return $this->hasOne('App\Models\Subject', 'user_id', 'id');
 
     }
-    public function sender(){
+
+    public function sender()
+    {
         return $this->hasMany('App\Models\Message', 'sender_id', 'id');
     }
 
-    public function recipient(){
+    public function recipient()
+    {
         return $this->hasMany('App\Models\Message', 'recipient_id', 'id');
     }
-    public function confirmation(){
-        return $this->hasOne('App\Models\Confirmation','user_id','id');
+
+    public function confirmation()
+    {
+        return $this->hasOne('App\Models\Confirmation', 'user_id', 'id');
     }
-    public function uploads(){
-        return $this->hasMany('App\Models\Article','user_id','id');
+
+    public function uploads()
+    {
+        return $this->hasMany('App\Models\Article', 'user_id', 'id');
+    }
+
+    public function headteacher()
+    {
+        return $this->hasOne('App\Models\Headteacher', 'user_id', 'id');
     }
 }

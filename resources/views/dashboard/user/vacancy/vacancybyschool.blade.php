@@ -36,8 +36,11 @@
 
 @endsection
 @section('content-footer')
+    <div class="showing" >
+        Showing {{ $schools->firstItem() }} to {{ $schools->lastItem() }} of {{ $schools->total() }} entries
+    </div>
 
     <div class="pagination-wrapper">
-        {{ $schools->links() }}
+        {!! $schools->links('vendor.pagination.bootstrap-4') !!}
     </div>
 @endsection

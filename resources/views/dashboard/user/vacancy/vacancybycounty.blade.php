@@ -40,8 +40,11 @@
 
 @endsection
 @section('content-footer')
+    <div class="showing" >
+        Showing {{ $counties->firstItem() }} to {{ $counties->lastItem() }} of {{ $counties->total() }} entries
+    </div>
 
     <div class="pagination-wrapper">
-        {{ $counties->links() }}
+        {!! $counties->links('vendor.pagination.bootstrap-4') !!}
     </div>
 @endsection

@@ -8,16 +8,20 @@
     </a>
 
     <ul class="treeview-menu">
-        <li class="{{ (request()->is('')) ? 'active': '' }}">
-            <a href="{{url('admin/details/complete')}}">
-                <i class="fa fa-circle-o"></i> School Administrator Profile
-            </a>
-        </li>        <li class="{{ (request()->is('')) ? 'active': '' }}">
-            <a href="{{url('admin/details/getform')}}">
-                <i class="fa fa-circle-o"></i> School Profile
-            </a>
-        </li>
-
+        @if(!auth()->user()->headteacher->user_id)
+            <li class="{{ (request()->is('')) ? 'active': '' }}">
+                <a href="{{url('admin/details/complete')}}">
+                    <i class="fa fa-circle-o"></i> School Administrator Profile
+                </a>
+            </li>
+        @endif
+        @if(!auth()->user()->school->user_id)
+            <li class="{{ (request()->is('')) ? 'active': '' }}">
+                <a href="{{url('admin/details/getform')}}">
+                    <i class="fa fa-circle-o"></i> School Profile
+                </a>
+            </li>
+        @endif
 
         <li class="{{ (request()->is('')) ? 'active': '' }}">
             <a href="{{ url('admin/details/vacancy') }}">
@@ -41,7 +45,6 @@
             </a>
         </li>
     </ul>
-
 
 
 </li>

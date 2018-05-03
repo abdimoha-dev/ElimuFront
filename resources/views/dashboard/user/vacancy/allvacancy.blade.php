@@ -24,7 +24,7 @@
                 <td>{{$school->no_of_classes}}</td>
                 <td>{{$school->no_of_teachers}}</td>
                 <td>{{$school->no_of_students}}</td>
-                <td>{{$school->NULL}}</td>
+                <td>{{$schools->total()}}</td>
                 <td><a href="{{ url('user/vacancies/school/'.$school->id)}}" class="btn btn-info" role="button">More Details</a></td>
                 <td></td>
 
@@ -36,11 +36,11 @@
 
 @endsection
 @section('content-footer')
-    <div class="showing pull-left" >
+    <div class="showing" >
         Showing {{ $schools->firstItem() }} to {{ $schools->lastItem() }} of {{ $schools->total() }} entries
     </div>
 
-    <div class="pagination-wrapper pull-right">
+    <div class="pagination-wrapper">
         {!! $schools->links('vendor.pagination.bootstrap-4') !!}
     </div>
 @endsection

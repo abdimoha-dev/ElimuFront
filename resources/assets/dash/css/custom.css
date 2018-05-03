@@ -1,1 +1,4 @@
 .list-group-item {    padding: 0px 10px; }
+label {
+    display: block !important;
+}

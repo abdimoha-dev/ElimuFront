@@ -33,8 +33,11 @@
     </table>
 @endsection
 @section('content-footer')
+    <div class="showing" >
+        Showing {{ $vacancies->firstItem() }} to {{ $vacancies->lastItem() }} of {{ $vacancies->total() }} entries
+    </div>
 
     <div class="pagination-wrapper">
-        {{ $vacancies->links() }}
+        {!! $vacancies->links('vendor.pagination.bootstrap-4') !!}
     </div>
 @endsection

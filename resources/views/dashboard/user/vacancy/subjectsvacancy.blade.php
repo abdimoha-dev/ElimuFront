@@ -55,8 +55,11 @@
 
 @endsection
 @section('content-footer')
+    <div class="showing" >
+        Showing {{ $subjects->firstItem() }} to {{ $subjects->lastItem() }} of {{ $subjects->total() }} entries
+    </div>
 
     <div class="pagination-wrapper">
-        {{ $subjects->links() }}
+        {!! $subjects->links('vendor.pagination.bootstrap-4') !!}
     </div>
 @endsection

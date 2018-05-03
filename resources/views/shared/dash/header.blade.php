@@ -36,7 +36,7 @@
                             <img src="{{ asset('dash/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
 
                             <p>
-                                {{auth()->user()->first_name}} {{auth()->user()->second_name}}-
+                                {{auth()->user()->first_name}} {{auth()->user()->second_name}}
                             </p>
                         </li>
                         <!-- Menu Footer-->
