@@ -17,7 +17,7 @@ class VacanciesTableSeeder extends Seeder
 
         School::all()->each(function ($school) {
 
-             factory(Vacancy::class, 10)->create([
+             factory(Vacancy::class, 15)->create([
                  'school_id' => $school->id,
              ]);
 

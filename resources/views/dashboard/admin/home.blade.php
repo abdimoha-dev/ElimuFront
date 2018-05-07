@@ -18,18 +18,7 @@
                     <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
 
                     <div class="info-box-content">
-                        <span class="info-box-text">Firs Name</span>
-                        <span class="info-box-number">{{auth()->user()->first_name}}
-                            <small> {{auth()->user()->second_name}}</small></span>
-                    </div>
-                    <!-- /.info-box-content -->
-                </div>
-
-                <div class="info-box">
-                    <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
-
-                    <div class="info-box-content">
-                        <span class="info-box-text">Firs Name</span>
+                        <span class="info-box-text">Name</span>
                         <span class="info-box-number">{{auth()->user()->first_name}}
                             <small> {{auth()->user()->second_name}}</small></span>
                     </div>
@@ -61,6 +50,3 @@
     </section>
 @endsection
 
-@section('content-footer')
-    Footer
-@endsection

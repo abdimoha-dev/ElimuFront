@@ -1,7 +1,4 @@
 <?php
-
-use App\Mail\ShowInterest;
-
 ################################################
 ##################### SITE #####################
 ################################################
@@ -15,9 +12,9 @@ Auth::routes();
 
 Route::get('confirm/{email}', 'EmailController@emailConfirmation');//email confirmation
 Route::get('check/email/confirmation/{token}', 'Auth\RegisterController@testtoken'); //on click email confirmation
-Route::post('check/phone/confirmation','Auth\RegisterController@phoneCode');
+Route::post('check/phone/confirmation', 'Auth\RegisterController@phoneCode');
 //sending sms phone number confirmation
-Route::get('sendsms','Auth\ConfirmPhoneController@index');
+//Route::get('sendsms','Auth\ConfirmPhoneController@index');
 
 ################################################
 ################## DASHBOARD ###################
@@ -34,11 +31,11 @@ Route::prefix('user')->middleware('auth')->group(function () {
         Route::get('schools', 'User\ApplicationController@showSchools');
 
         Route::get('schoolvacancy', 'User\ApplicationController@vacancybysubjects');
-        Route::get('countydropdown', 'User\ApplicationController@county');
-        Route::get('countyvacancy', 'User\ApplicationController@vacancybycounty');
 
-        Route::get('county', 'User\ApplicationController@showvacancybycounty');
-        Route::post('county', 'User\ApplicationController@vacancybycounty');
+//        diplaying vacancy by county dropdown
+        Route::get('countydropdown', 'User\ApplicationController@county');
+        Route::post('countydropdown', 'User\ApplicationController@vacancybycounty');
+
 
         Route::get('school/{school_id}', 'User\ApplicationController@showVacancies');
         Route::get('schoolbyvacancy/{school_id}', 'User\ApplicationController@vacancybyschool');
@@ -116,8 +113,8 @@ Route::view('applicationform', 'viewdetails.');
 
 ###################RESETTING#####################
 //Route::view('resetemail', 'auth/passwords/email');
-Route::post('shared/email', 'Auth\ForgotPasswordController@passWordReset');
-Route::get('auth/passwords/reset','Auth\ForgotPasswordController@resetform');
+Route::post('shared/email', 'Auth\ForgotPaMAILGUN_SECRETsswordController@passWordReset');
+Route::get('auth/passwords/reset', 'Auth\ForgotPasswordController@resetform');
 
 
 //Route::view('resetPassword', 'auth/passwords/reset');
@@ -139,4 +136,7 @@ Route::post('messageform/{id}', 'Message\MessageController@sendMessage');
 Route::get('sentmessages', 'Message\MessageController@getMessage');
 
 ###########CONFIRMATION####################
-Route::get('sms','HomeController@sms');
+Route::get('sms', 'HomeController@sms');
+
+
+Route::view('reset', 'auth/passwords/reset');

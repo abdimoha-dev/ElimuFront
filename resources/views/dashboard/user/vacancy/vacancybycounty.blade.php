@@ -20,6 +20,7 @@
         </tr>
         </thead>
         <tbody>
+        @if(count($counties) > 0)
         @foreach ($counties as $county)
             <tr>
                 <td>{{$county->name}}</td>
@@ -34,6 +35,18 @@
 
             </tr>
         @endforeach
+        @else
+
+            <tr><td col="12">  <div class="alert alert-danger">
+                       There are no marching records
+                    </div>
+                </td></tr>
+
+
+
+
+        @endif
+
         </tbody>
 
     </table>

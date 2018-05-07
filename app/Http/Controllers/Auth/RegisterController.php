@@ -118,19 +118,17 @@ class RegisterController extends Controller
         }
     }
 
-    public function phoneCode(SmsCodeRequest$request)
+    public function phoneCode(SmsCodeRequest $request)
     {
-       $conf=Confirmation::where('sms_code',$request->sms_code);
-       if ($conf){
-          $conf->update([
-              'phone_code'=> NULL,
-           ]);
-           return view('dashboard.user.home')->with('Code verified');
-       }
-       else
-       {
-           return view('dashboard.user.home')->with('Code has not been verified');
-       }
+        $conf = Confirmation::where('sms_code', $request->sms_code);
+        if ($conf) {
+            $conf->update([
+                'phone_code' => NULL,
+            ]);
+            return view('dashboard.user.home')->with('Code verified');
+        } else {
+            return view('dashboard.user.home')->with('Code has not been verified');
+        }
 
     }
 

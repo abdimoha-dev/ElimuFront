@@ -5,17 +5,18 @@
         My school vacancy
     </h1>
 @endsection
-    <table class="table table-condensed">
-        <thead>
-        <tr>
-            <th>Vacancy Reference Number</th>
-            <th>Duration For Teaching</th>
-            <th>Subjects Needed</th>
-            <th>Classes To Be Taught</th>
-        </tr>
-        </thead>
-        <tbody>
+<table class="table table-condensed">
+    <thead>
+    <tr>
+        <th>Vacancy Reference Number</th>
+        <th>Duration For Teaching</th>
+        <th>Subjects Needed</th>
+        <th>Classes To Be Taught</th>
+    </tr>
+    </thead>
+    <tbody>
 
+    @if(count($vacancies) > 0)
         @foreach ($vacancies as $vacancy)
             <tr>
                 <td>{{$vacancy->reference_no}}</td>
@@ -27,13 +28,20 @@
 
             </tr>
         @endforeach
+        <tr>
+            <td col="12">
+                <div class="alert alert-danger">
+                    There are no marching records
+                </div>
+            </td>
+        </tr>
 
-        </tbody>
+    </tbody>
 
-    </table>
+</table>
 @endsection
 @section('content-footer')
-    <div class="showing" >
+    <div class="showing">
         Showing {{ $vacancies->firstItem() }} to {{ $vacancies->lastItem() }} of {{ $vacancies->total() }} entries
     </div>
 

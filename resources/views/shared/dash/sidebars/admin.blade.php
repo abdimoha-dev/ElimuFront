@@ -8,20 +8,18 @@
     </a>
 
     <ul class="treeview-menu">
-        @if(!auth()->user()->headteacher->user_id)
             <li class="{{ (request()->is('')) ? 'active': '' }}">
                 <a href="{{url('admin/details/complete')}}">
                     <i class="fa fa-circle-o"></i> School Administrator Profile
                 </a>
             </li>
-        @endif
-        @if(!auth()->user()->school->user_id)
+
             <li class="{{ (request()->is('')) ? 'active': '' }}">
                 <a href="{{url('admin/details/getform')}}">
                     <i class="fa fa-circle-o"></i> School Profile
                 </a>
             </li>
-        @endif
+
 
         <li class="{{ (request()->is('')) ? 'active': '' }}">
             <a href="{{ url('admin/details/vacancy') }}">
@@ -53,9 +51,6 @@
     <a href="../mailbox/mailbox.html">
         <i class="fa fa-envelope"></i> <span>Mailbox</span>
         <span class="pull-right-container">
-              <small class="label pull-right bg-yellow">12</small>
-              <small class="label pull-right bg-green">16</small>
-              <small class="label pull-right bg-red">5</small>
             </span>
     </a>
 </li>

@@ -41,7 +41,6 @@ class LoginController extends Controller
 
     public function login(LoginRequest $request)
     {
-        $var=6;
         // If the class is using the ThrottlesLogins trait, we can automatically throttle
         // the login attempts for this application. We'll key this by the username and
         // the IP address of the client making these requests into this application.
@@ -52,10 +51,24 @@ class LoginController extends Controller
         }
 
         if (auth()->attempt(['email' => $request->email, 'password' => $request->password])) {
-            session()->flash('success-message',
-                ['Welcome back ' . auth()->user()->first_name . ' ' . auth()->user()->second_name . '!']);
+
+            if (auth()->user()->confirmation->email_token && auth()->user()->confirmation->phone_token) {
+
+                session()->flash('warning-message', ['Please confirm your email address and phone number!']);
+            } else if (auth()->user()->confirmation->email_token) {
+
+                session()->flash('warning-message', ['Please confirm your email address!']);
+            } else if (auth()->user()->confirmation->phone_token) {
+
+                session()->flash('warning-message', ['Please confirm your phone number!']);
+            } else {
+                session()->flash('success-message',
+                    ['Welcome back ' . auth()->user()->first_name . ' ' . auth()->user()->second_name . '!']);
+            }
+
             return redirect()->intended('/home');
         }
+
 
         // If the login attempt was unsuccessful we will increment the number of attempts
         // to login and redirect the user back to the login form. Of course, when this

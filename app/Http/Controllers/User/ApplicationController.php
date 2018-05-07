@@ -4,17 +4,23 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\User\CompleteApplicationRequest;
+use App\Http\Requests\User\DropDownRequest;
 use App\Http\Requests\User\EditApplicationRequest;
+use App\Http\Traits\Confirms;
 use Illuminate\Http\Request;
 use App\Models\Application;
 use Illuminate\Support\Facades\DB;
 use App\Models\School;
 use App\Models\Vacancy;
 
+
 class ApplicationController extends Controller
 {
+    use Confirms;
+
     public function showCompleteApplicationForm()
     {
+
         return view('dashboard.user.application.complete');
 
     }
@@ -49,6 +55,7 @@ class ApplicationController extends Controller
 
     public function showApplicationDetails()//show details for a registered user
     {
+//        $b=$this->emailPhone();
         return view('dashboard.user.application.details', [
             'user' => auth()->user(),
         ]);
@@ -109,9 +116,9 @@ class ApplicationController extends Controller
 
     public function vacancybycounty(Request $request)
     {
-
+//        dd($request->toArray());
         return view('dashboard.user.vacancy.vacancybycounty', [
-            'counties' => School::where('location', $request->counties)->get(),
+            'counties' => School::where('location', $request->counties)->paginate(10),
         ]);
     }
 

@@ -24,15 +24,14 @@
 
 @include('shared.dash.header')
 
+
 <!-- =============================================== -->
 
     <!-- Left side column. contains the sidebar -->
 @include('shared.dash.sidebar')
 
 <!-- =============================================== -->
-@if(!auth()->user()->phone_token)
-    @include('auth.modal')
-@endif
+
 <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->

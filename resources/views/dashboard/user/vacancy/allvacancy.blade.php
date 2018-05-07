@@ -12,31 +12,48 @@
             <th>Number Of Teachers</th>
             <th>Number Of Students</th>
             <th>Number Of Vacancies</th>
-            <th>Vacancy Details </th>
+            <th>Vacancy Details</th>
         </tr>
         </thead>
         <tbody>
-        @foreach ($schools as $school)
-            <tr>
-                <td>{{$school->name}}</td>
-                <td>{{$school->location}}</td>
-                <td>{{$school->address}}</td>
-                <td>{{$school->no_of_classes}}</td>
-                <td>{{$school->no_of_teachers}}</td>
-                <td>{{$school->no_of_students}}</td>
-                <td>{{$schools->total()}}</td>
-                <td><a href="{{ url('user/vacancies/school/'.$school->id)}}" class="btn btn-info" role="button">More Details</a></td>
-                <td></td>
+        @if(count($schools) > 0)
+            @foreach ($schools as $school)
+                <tr>
+                    <td>{{$school->name}}</td>
+                    <td>{{$school->location}}</td>
+                    <td>{{$school->address}}</td>
+                    <td>{{$school->no_of_classes}}</td>
+                    <td>{{$school->no_of_teachers}}</td>
+                    <td>{{$school->no_of_students}}</td>
+                    <td>{{$schools->total()}}</td>
+                    <td><a href="{{ url('user/vacancies/school/'.$school->id)}}" class="btn btn-info" role="button">More
+                            Details</a></td>
+                    <td></td>
 
+                </tr>
+            @endforeach
+
+        @else
+
+            <tr>
+                <td col="12">
+                    <div class="alert alert-danger">
+                        There are no marching records
+                    </div>
+                </td>
             </tr>
-        @endforeach
+
+
+
+
+        @endif
         </tbody>
 
     </table>
 
 @endsection
 @section('content-footer')
-    <div class="showing" >
+    <div class="showing">
         Showing {{ $schools->firstItem() }} to {{ $schools->lastItem() }} of {{ $schools->total() }} entries
     </div>
 

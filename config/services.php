@@ -1,5 +1,6 @@
 <?php
 
+
 return [
 
     /*
@@ -15,8 +16,8 @@ return [
     */
 
     'mailgun' => [
-        'domain' => env('MAILGUN_DOMAIN'),
-        'secret' => env('MAILGUN_SECRET'),
+        'domain' => env('support.elimufront.com'),
+        'secret' => env('key-02cdfda265aa374a472a6246791ac03e'),
     ],
 
     'ses' => [
@@ -34,5 +35,7 @@ return [
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
+//    MAILGUN_DOMAIN=support.elimufront.com
+//MAILGUN_SECRET=key-02cdfda265aa374a472a6246791ac03e
 
 ];

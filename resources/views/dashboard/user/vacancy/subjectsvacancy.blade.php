@@ -43,11 +43,14 @@
             </tr>
         @endforeach
         @else
-            <tr><td col="12"> There are no marching records</td></tr>
+            <tr><td col="12">  <div class="alert alert-danger">
+                        There are no marching records
+                    </div>
+                </td></tr>
 
 
-            @endif
 
+        @endif
 
         </tbody>
 

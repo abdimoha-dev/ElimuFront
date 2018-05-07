@@ -33,7 +33,7 @@ class VacancyController extends Controller
     {
 
         return view('dashboard.admin.details.vacancy.teachersvacancy', [
-            'teachers' => User::where('ROLE', 'USER')->paginate(20),
+            'teachers' => User::where('ROLE', 'USER')->paginate(10),
 
 
         ]);
@@ -43,7 +43,7 @@ class VacancyController extends Controller
     public function showTeachersDetails($id)
     {
         return view('dashboard.admin.details.admindetails', [
-            'details' => Application::where('user_id', $id)->paginate(15),
+            'details' => Application::where('user_id', $id)->paginate(10),
 
 
         ]);
@@ -53,7 +53,7 @@ class VacancyController extends Controller
     public function showMyVacancies()
     {
         return view('dashboard.admin.details.vacancy.schoolvacancy', [
-            'vacancies' => Vacancy::where('school_id', auth()->user()->id)->paginate(15),
+            'vacancies' => Vacancy::where('school_id', auth()->user()->id)->paginate(10),
         ]);
 
     }
@@ -63,7 +63,7 @@ class VacancyController extends Controller
         $vacancy = Vacancy::find($id);
         return view('dashboard.admin.details.vacancy.relatedvacancy', [
             'teachers' => Application::where('subject_one', $vacancy->subjects)
-                ->orwhere('subject_two', $vacancy->subjects)->paginate(15),
+                ->orwhere('subject_two', $vacancy->subjects)->paginate(10),
 
         ]);
 

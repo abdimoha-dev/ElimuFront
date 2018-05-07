@@ -6,7 +6,7 @@
     </h1>
 @endsection
 
-{{ Form::open(['url'=>'user/vacancies/county', 'role' =>'form'])  }}
+{{ Form::open(['url'=>'user/vacancies/countydropdown', 'role' =>'form'])  }}
 @csrf
 {!!  Form::select('counties', config('sys.settings.counties'));  !!}
 

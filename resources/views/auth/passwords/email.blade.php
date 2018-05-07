@@ -34,8 +34,6 @@
                             </div>
 
                         </div>
-
-
                     {!! Form::close() !!}
 
 

@@ -16,6 +16,7 @@
         </tr>
         </thead>
         <tbody>
+        @if(count($vacancies)>0)
         @foreach ($vacancies as $vacancy)
             <tr>
                 <td>{{$vacancy->reference_no}}</td>
@@ -27,14 +28,24 @@
 
             </tr>
         @endforeach
+        @else
+            <tr>
+                <td col="12"> There are no vacancies for your school</td>
+            </tr>
+
+
+        @endif
         </tbody>
 
     </table>
 
 @endsection
 @section('content-footer')
+    <div class="showing" >
+        Showing {{ $vacancies->firstItem() }} to {{ $vacancies->lastItem() }} of {{ $vacancies->total() }} entries
+    </div>
 
     <div class="pagination-wrapper">
-        {{ $vacancies->links() }}
+        {!! $vacancies->links('vendor.pagination.bootstrap-4') !!}
     </div>
 @endsection

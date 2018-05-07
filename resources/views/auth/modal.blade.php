@@ -1,7 +1,7 @@
-<div class="modal" tabindex="-1" role="dialog"id="myModal">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
+<div class="modal" tabindex="-1" role="dialog" id="myModal">
+    <div class="modal-dialog"  style="padding-left: 20em; " role="document">
+        <div class="modal-content" >
+            <div class="modal-header" >
                 <h5 class="modal-title">Register</h5>
                 <h6 class="modal-title pull-left">Code</h6>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -32,7 +32,7 @@
 @push('footer-scripts')
 <script>
     $(document).ready(function () {
-        $('#myModal').modal('show');
+        $('#myModal').fadeIn(3000).modal('show');
     })
 </script>
     @endpush

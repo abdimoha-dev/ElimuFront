@@ -13,9 +13,16 @@ class  StoryController extends Controller
     //show all stories
     public function showStories()
     {
-        return view('dashboard.user.news.news', [
-            'articles' => Article::orderBy('created_at', 'desc')->paginate(10),
-        ]);
+      $article=Article::first();
+        if ($article){
+            return view('dashboard.user.news.news', [
+                'articles' => Article::orderBy('created_at', 'desc')->paginate(10),
+            ]);
+        }
+        else{
+            return 'There are no latest news';
+        }
+
     }
 
     //show comment form
